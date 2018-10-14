@@ -13,6 +13,29 @@ body {
   margin: 0;
 }
 
+p,
+a {
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
 a {
   text-decoration: none;
   color: $black;
@@ -20,10 +43,4 @@ a {
 
 a:visited {
   color: $black;
-}
-
-a:hover {
-}
-
-a:active {
 }

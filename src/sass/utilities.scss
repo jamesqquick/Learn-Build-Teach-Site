@@ -1,5 +1,23 @@
+@import "variables";
+
+@mixin section() {
+  padding: 10rem 5rem;
+  background-color: $off-white;
+}
+
 .container {
   max-width: 900px;
-  padding: 3rem;
+  padding: 5rem;
   margin: 0 auto;
+}
+
+.section {
+  @include section();
+}
+
+.section-light {
+}
+
+span.highlight {
+  color: $secondary;
 }
