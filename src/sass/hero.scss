@@ -1,0 +1,33 @@
+@import "variables";
+
+.hero-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.hero-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-item-title {
+  text-align: center;
+}
+
+.hero-item-subtitle {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.hero-title {
+  text-align: center;
+  font-weight: 300;
+}
+
+.title-underline {
+  border: 1px solid $grey-light;
+  width: 5rem;
+  margin-bottom: 2rem;
+}
