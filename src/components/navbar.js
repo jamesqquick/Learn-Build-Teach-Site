@@ -1,33 +1,30 @@
 import React from "react";
 import { Link } from "gatsby";
+import "../sass/navbar.scss";
+import logo from "../images/lbt-icon.svg";
 
 const Navbar = ({ siteTitle }) => (
-  <div
-    style={{
-      background: "rebeccapurple",
-      marginBottom: "1.45rem"
-    }}
-  >
-    <div
-      style={{
-        margin: "0 auto",
-        maxWidth: 960,
-        padding: "1.45rem 1.0875rem"
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: "white",
-            textDecoration: "none"
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <nav className="nav">
+    <div className="nav-content">
+      <div className="nav-brand">
+        <img src={logo} alt="" />
+      </div>
+      <ul className="nav-items">
+        <li className="nav-item">
+          <Link to="/">Featured</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/">Courses</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/">Newsletter</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/">Contact</Link>
+        </li>
+      </ul>
     </div>
-  </div>
+  </nav>
 );
 
 export default Navbar;

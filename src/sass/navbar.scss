@@ -1,0 +1,28 @@
+@import "../sass/variables.scss";
+
+.nav {
+  max-width: 900px;
+  padding: 1rem 3rem;
+  margin: 0 auto;
+  background-color: $off-white;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-left: 2rem;
+  color: $black;
+  font-size: 1.4rem;
+}
+
+.nav-item > a {
+  font-weight: 300;
+}
+.nav-item > a:hover {
+  color: $black;
+}

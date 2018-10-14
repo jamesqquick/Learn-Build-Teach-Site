@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -9,4 +11,19 @@ html {
 
 body {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+a:visited {
+  color: $black;
+}
+
+a:hover {
+}
+
+a:active {
 }
