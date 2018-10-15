@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SplitContent from "../components/splitView";
 import { Section } from "../components/section";
 import CourseList from "../components/courseList";
-
+import Newsletter from "../components/newsletter";
 const IndexPage = () => (
   <Layout>
     <Section>
@@ -20,6 +20,9 @@ const IndexPage = () => (
     </Section>
     <Section title="Start Learning!">
       <CourseList />
+    </Section>
+    <Section title="Newsletter" classString="section-dark">
+      <Newsletter />
     </Section>
   </Layout>
 );
