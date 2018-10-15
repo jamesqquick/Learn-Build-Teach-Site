@@ -9,7 +9,7 @@ function onStartLearningClick() {
 
 export default () => {
   return (
-    <div className="section">
+    <div className="hero">
       <div className="hero-items">
         <HeroItem title="Learn." subtitle="the latest and greatest" />
         <HeroItem title="Build." subtitle="projects to reinfornce learnings" />

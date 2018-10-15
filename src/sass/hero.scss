@@ -9,6 +9,7 @@
 .hero-item {
   display: flex;
   flex-direction: column;
+  width: 33%;
 }
 
 .hero-item-title {
@@ -27,7 +28,7 @@
 }
 
 .title-underline {
-  border: 1px solid $grey-light;
+  border: 1px solid $light-grey;
   width: 5rem;
   margin-bottom: 2rem;
 }

@@ -1,0 +1,22 @@
+@import "variables";
+
+@mixin section() {
+  padding: 12rem 5rem;
+  background-color: $off-white;
+}
+
+.section {
+  @include section();
+}
+
+.section-dark {
+  background-color: $light-grey;
+}
+
+.section-full {
+  padding: 0;
+}
+
+.section-title {
+  margin-bottom: 5rem;
+}
