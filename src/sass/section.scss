@@ -20,3 +20,9 @@
 .section-title {
   margin-bottom: 5rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .section {
+    padding: 8rem 2rem;
+  }
+}
