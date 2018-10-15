@@ -1,5 +1,10 @@
 import React from "react";
 import "../sass/hero.scss";
+import Button from "./button";
+
+function onStartLearningClick() {
+  console.log("clicked");
+}
 
 export default () => {
   return (
@@ -28,6 +33,7 @@ export default () => {
         <span className="highlight">Design</span>, and{" "}
         <span className="highlight">Tools</span> together.
       </h4>
+      <Button btnText="Start Learning" onBtnClick={onStartLearningClick} />
     </div>
   );
 };
