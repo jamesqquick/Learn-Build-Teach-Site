@@ -33,3 +33,22 @@
   width: 5rem;
   margin-bottom: 2rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .hero-items {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0rem;
+    width: 100%;
+  }
+
+  .title-underline {
+    margin-bottom: 0.5rem;
+  }
+}
