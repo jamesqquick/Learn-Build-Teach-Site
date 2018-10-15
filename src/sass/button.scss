@@ -8,6 +8,10 @@
   font-size: 1.4rem;
 }
 
+.btn:disabled {
+  background-color: red;
+}
+
 .btn-lg {
   font-size: 1.8rem;
 }

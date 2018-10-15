@@ -11,9 +11,18 @@ export default () => {
   return (
     <div className="hero">
       <div className="hero-items">
-        <HeroItem title="Learn." subtitle="the latest and greatest" />
-        <HeroItem title="Build." subtitle="projects to reinfornce learnings" />
-        <HeroItem title="Teach." subtitle="to help others grow and learn" />
+        <HeroItem
+          title="Learn."
+          subtitle="the latest and greatest technologies in our domain"
+        />
+        <HeroItem
+          title="Build."
+          subtitle="projects to reinfornce the things that we learned"
+        />
+        <HeroItem
+          title="Teach."
+          subtitle="to help others in the community grow and learn"
+        />
       </div>
 
       <h4 className="hero-title">
