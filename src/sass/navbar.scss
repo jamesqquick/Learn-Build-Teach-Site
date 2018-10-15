@@ -1,13 +1,13 @@
 @import "../sass/variables.scss";
 
 .nav {
-  max-width: 900px;
-  padding: 1rem 3rem;
-  margin: 0 auto;
   background-color: $off-white;
 }
 
 .nav-content {
+  max-width: 900px;
+  padding: 1rem 3rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
