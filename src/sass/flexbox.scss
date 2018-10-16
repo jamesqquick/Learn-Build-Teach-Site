@@ -1,10 +1,19 @@
 .flex {
   display: flex;
+  flex-direction: row;
 }
 
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-align-center {
+  align-items: center;
 }
 
 .flex-child-grow-1 > *:first-child {
@@ -13,10 +22,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .flex {
-    flex-direction: column;
-  }
-
   .flex-child-grow-1 > *:first-child {
     margin-bottom: 1rem;
   }

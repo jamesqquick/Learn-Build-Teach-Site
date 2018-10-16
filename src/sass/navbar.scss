@@ -16,7 +16,7 @@
 }
 
 .nav-item {
-  display: inline-block;
+  display: inline;
   margin-left: 2rem;
   color: $black;
 }
@@ -28,8 +28,27 @@
   color: $black;
 }
 
+#hamburgerBtn {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   .nav {
     position: static;
+    border-bottom: 1px solid darken($color: $off-white, $amount: 20);
+  }
+
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  #hamburgerBtn {
+    display: inline-block;
+  }
+
+  .nav-item {
+    display: block;
+    margin-bottom: 1rem;
   }
 }
