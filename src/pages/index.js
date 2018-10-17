@@ -10,20 +10,27 @@ const IndexPage = () => (
     <Section>
       <Hero />
     </Section>
-    <Section classString="section-dark section-full">
-      <SplitContent
-        leftTitle="Featured Content"
-        rightTitle="Learn VS Code"
-        rightDescription="Visual Studio Code is the most popular text editor for Web Development.  Learning to harness its full power will drastically improve your efficiency and proficiency as a developer!"
-        btnText="Check it Out!"
-      />
-    </Section>
-    <Section title="Start Learning!">
-      <CourseList />
-    </Section>
-    <Section title="Newsletter" classString="section-dark">
-      <Newsletter />
-    </Section>
+    <div id="featured">
+      <Section classString="section-dark section-full">
+        <SplitContent
+          leftTitle="Featured Content"
+          rightTitle="Learn VS Code"
+          rightDescription="Visual Studio Code is the most popular text editor for Web Development.  Learning to harness its full power will drastically improve your efficiency and proficiency as a developer!"
+          btnText="Check it Out!"
+        />
+      </Section>
+    </div>
+    <div id="courses">
+      <Section title="Start Learning!">
+        <CourseList />
+      </Section>
+    </div>
+
+    <div id="newsletter">
+      <Section title="Newsletter" classString="section-dark">
+        <Newsletter />
+      </Section>
+    </div>
   </Layout>
 );
 

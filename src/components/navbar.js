@@ -28,16 +28,16 @@ class Navbar extends React.Component {
         </div>
         <ul className={"nav-items" + (this.state.navOpen ? "" : " hidden-sm")}>
           <li className="nav-item">
-            <Link to="/">Featured</Link>
+            <a href="#featured">Featured</a>
           </li>
           <li className="nav-item">
-            <Link to="/">Courses</Link>
+            <a href="#courses">Courses</a>
           </li>
           <li className="nav-item">
-            <Link to="/">Newsletter</Link>
+            <a href="#newsletter">Newsletter</a>
           </li>
           <li className="nav-item">
-            <Link to="/">Contact</Link>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>

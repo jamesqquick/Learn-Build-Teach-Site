@@ -4,15 +4,17 @@
   background-color: $off-white;
   position: fixed;
   width: 100%;
+  height: 80px;
 }
 
 .nav-content {
   max-width: 900px;
-  padding: 1rem 3rem;
+  padding: 0rem 3rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .nav-item {
@@ -36,11 +38,14 @@
   .nav {
     position: static;
     border-bottom: 1px solid darken($color: $off-white, $amount: 20);
+    height: auto;
+    padding: 1rem 0;
   }
 
   .nav-content {
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
   }
 
   #hamburgerBtn {
@@ -50,5 +55,9 @@
   .nav-item {
     display: block;
     margin-bottom: 1rem;
+  }
+
+  .nav-item > a {
+    font-size: 1.8rem;
   }
 }

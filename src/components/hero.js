@@ -32,7 +32,9 @@ export default () => {
       </h4>
 
       <div className="text-center">
-        <Button btnText="Start Learning" onBtnClick={onStartLearningClick} />
+        <a href="#courses">
+          <Button btnText="Start Learning" onBtnClick={onStartLearningClick} />
+        </a>
       </div>
     </div>
   );
