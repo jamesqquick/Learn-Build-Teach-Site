@@ -8,30 +8,44 @@
   height: 80px;
   z-index: 1000;
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
-}
 
-.nav-content {
-  max-width: 900px;
-  padding: 0rem 3rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
+  .nav-content {
+    max-width: 900px;
+    padding: 0rem 3rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 
-.nav-item {
-  display: inline;
-  margin-left: 2rem;
-  color: $black;
-}
+    .nav-item {
+      display: inline;
+      margin-left: 2rem;
+      color: $black;
 
-.nav-item > a {
-  font-weight: 300;
-}
-.nav-item > a:hover {
-  color: $black;
-  font-size: 1.5rem;
+      &:hover {
+        color: $off-white;
+      }
+
+      & > .nav-btn,
+      .nav-btn:visited {
+        background-color: $secondary;
+        padding: 1rem 3rem;
+        border-radius: 5px;
+        color: $off-white;
+        font-size: 1.4rem;
+        transition: 100ms;
+      }
+
+      & > .nav-btn:hover {
+        background-color: $secondary-dark;
+      }
+
+      & > a {
+        font-weight: 300;
+      }
+    }
+  }
 }
 
 #hamburgerBtn {

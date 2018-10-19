@@ -17,7 +17,9 @@ class Navbar extends React.Component {
       <div className="nav-content">
         <div className="flex flex-between flex-align-center full-width">
           <div className="nav-brand">
-            <img src={logo} alt="Learn Build Teach Logo." />
+            <a href="#">
+              <img src={logo} alt="Learn Build Teach Logo." />
+            </a>
           </div>
           <a id="hamburgerBtn">
             <FontAwesomeIcon
@@ -39,7 +41,11 @@ class Navbar extends React.Component {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#newsletter" onClick={this.toggleNavbar}>
+            <a
+              className="nav-btn"
+              href="#newsletter"
+              onClick={this.toggleNavbar}
+            >
               Newsletter
             </a>
           </li>
