@@ -26,6 +26,10 @@ span.highlight {
   display: default;
 }
 
+.text-danger {
+  color: red;
+}
+
 @media only screen and (max-width: 768px) {
   .hidden-sm {
     display: none;

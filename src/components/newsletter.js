@@ -6,14 +6,17 @@ export default class Newsletter extends React.Component {
     super(props);
     this.state = {
       email: "",
-      subscribed: false
+      subscribed: false,
+      errorMsg: null
     };
   }
   render() {
     const validEmail = this.validateEmail(this.state.email);
+
+    const { email, subscribed, errorMsg } = this.state;
     return (
       <React.Fragment>
-        {!this.state.subscribed ? (
+        {!subscribed ? (
           <form className="newsletter" onSubmit={this.onSubscribeClick}>
             <p>
               Want to stay up to date with our latest content in Web
@@ -25,12 +28,13 @@ export default class Newsletter extends React.Component {
                 name="email"
                 placeholder="Email"
                 onChange={this.onInputChange}
-                value={this.state.email}
+                value={email}
               />
               <button className="btn" disabled={!validEmail}>
                 Subscribe
               </button>
             </div>
+            {!!errorMsg ? <p className="text-danger">{errorMsg}</p> : ""}
           </form>
         ) : (
           <h2 className="text-center">Thanks for subscribing!</h2>
@@ -54,12 +58,24 @@ export default class Newsletter extends React.Component {
           email: this.state.email
         })
       });
-      var body = await response.json();
 
-      this.setState({
-        email: "",
-        subscribed: true
-      });
+      var body = await response.json();
+      console.log("body", body);
+
+      if (response.status === 500) {
+        //TODO: display popup message for failure
+        const errorMsg = body.msg;
+        console.log(errorMsg);
+        this.setState({
+          errorMsg
+        });
+      } else {
+        this.setState({
+          email: "",
+          subscribed: true,
+          errorMsg: null
+        });
+      }
     } catch (err) {
       //TODO: display popup message for failure
       console.log("err", err);
