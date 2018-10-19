@@ -13,7 +13,7 @@ class Navbar extends React.Component {
     };
   }
   render = () => (
-    <nav className="nav">
+    <nav className={"nav" + (this.state.navOpen ? " open" : "")}>
       <div className="nav-content">
         <div className="flex flex-between flex-align-center full-width">
           <div className="nav-brand">
@@ -29,17 +29,23 @@ class Navbar extends React.Component {
         </div>
         <ul className={"nav-items" + (this.state.navOpen ? "" : " hidden-sm")}>
           <li className="nav-item">
-            <a href="#featured">Featured</a>
+            <a href="#featured" onClick={this.toggleNavbar}>
+              Featured
+            </a>
           </li>
           <li className="nav-item">
-            <a href="#courses">Courses</a>
+            <a href="#courses" onClick={this.toggleNavbar}>
+              Courses
+            </a>
           </li>
           <li className="nav-item">
-            <a href="#newsletter">Newsletter</a>
+            <a href="#newsletter" onClick={this.toggleNavbar}>
+              Newsletter
+            </a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a href="#contact">Contact</a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

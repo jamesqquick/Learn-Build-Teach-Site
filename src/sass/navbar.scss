@@ -1,18 +1,14 @@
 @import "../sass/variables.scss";
 
-
 .nav {
   background-color: $off-white;
   position: sticky;
-  top:0px;
+  top: 0px;
   width: 100%;
   height: 80px;
   z-index: 1000;
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
-
 }
-
-
 
 .nav-content {
   max-width: 900px;
@@ -35,6 +31,7 @@
 }
 .nav-item > a:hover {
   color: $black;
+  font-size: 1.5rem;
 }
 
 #hamburgerBtn {
@@ -46,6 +43,37 @@
     position: static;
     height: auto;
     padding: 1rem 0;
+  }
+
+  .nav.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $light-grey;
+    opacity: 0.98;
+
+    .nav-content {
+      justify-content: flex-start;
+
+      .nav-items {
+        align-self: stretch;
+        padding-left: 0;
+        margin-top: 5rem;
+
+        .nav-item {
+          margin-left: 0;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        a {
+          text-align: center;
+          font-size: 2.8rem;
+        }
+      }
+    }
   }
 
   .nav-content {
