@@ -19,10 +19,10 @@ export default class Newsletter extends React.Component {
         {!subscribed ? (
           <form className="newsletter" onSubmit={this.onSubscribeClick}>
             <p>
-              Want to stay up to date with our latest content in Web
-              Development, Design, and Tools? Subscribe to our newsletter!{" "}
+              Subscribe to stay up to date with our latest content in Web
+              Development, Design, and Tools!!
             </p>
-            <div className="flex flex-child-grow-1">
+            <div className="inline-form-input">
               <input
                 type="email"
                 name="email"

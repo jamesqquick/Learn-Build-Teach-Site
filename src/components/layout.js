@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-
+import Footer from "./footer";
 import Navbar from "./navbar";
 import "../sass/index.scss";
 
@@ -34,6 +34,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Navbar siteTitle={data.site.siteMetadata.title} />
         <div>{children}</div>
+        <Footer />
       </>
     )}
   />

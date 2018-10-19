@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import "../sass/navbar.scss";
 import logo from "../images/lbt-icon.svg";
-import hamburger from "../images/hamburger.svg";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -19,9 +20,9 @@ class Navbar extends React.Component {
             <img src={logo} alt="Learn Build Teach Logo." />
           </div>
           <a id="hamburgerBtn">
-            <img
-              src={hamburger}
-              alt="Menu Button"
+            <FontAwesomeIcon
+              icon={this.state.navOpen ? faTimes : faBars}
+              size="2x"
               onClick={this.toggleNavbar}
             />
           </a>
