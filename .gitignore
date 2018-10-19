@@ -60,3 +60,6 @@ bundle-stats.json
 
 # Environment Variables
 .env
+
+#netlify stuff
+/lambda
