@@ -4,11 +4,15 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "axios": "^0.18.0",
+    "base-64": "^0.1.0",
+    "dotenv": "^6.1.0",
     "gatsby": "^2.0.19",
     "gatsby-plugin-manifest": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
+    "netlify-lambda": "^1.0.2",
     "node-sass": "^4.9.3",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
@@ -23,7 +27,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:lambda": "netlify-lambda serve functions"
   },
   "devDependencies": {
     "prettier": "^1.14.2"
