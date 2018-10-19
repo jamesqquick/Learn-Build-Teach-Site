@@ -3,7 +3,11 @@ import Newsletter from "./newsletter";
 import "../sass/footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faYoutube, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import {
+  faYoutube,
+  faFacebook,
+  faTwitter
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function footer() {
   return (
@@ -14,8 +18,11 @@ export default function footer() {
           <a href="https://www.youtube.com/c/jamesqquick">
             <FontAwesomeIcon icon={faYoutube} size="2x" />
           </a>
-          <a href="https://www.facebook.com">
+          <a href="https://www.facebook.com/learnbuildteach/">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
+          </a>
+          <a href="https://www.twitter.com/jamesqquick">
+            <FontAwesomeIcon icon={faTwitter} size="2x" />
           </a>
         </div>
       </div>
