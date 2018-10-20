@@ -44,7 +44,6 @@ class Navbar extends React.Component {
               smooth={true}
               offset={-70}
               duration={500}
-              onSetActive={this.handleSetActive}
               onClick={this.closeNavbar}
             >
               Featured
@@ -58,7 +57,6 @@ class Navbar extends React.Component {
               smooth={true}
               offset={-70}
               duration={500}
-              onSetActive={this.handleSetActive}
               onClick={this.closeNavbar}
             >
               Courses
@@ -72,7 +70,6 @@ class Navbar extends React.Component {
               smooth={true}
               offset={-70}
               duration={500}
-              onSetActive={this.handleSetActive}
               onClick={this.closeNavbar}
             >
               Newsletter
@@ -85,10 +82,6 @@ class Navbar extends React.Component {
       </div>
     </nav>
   );
-
-  handleSetActive = event => {
-    console.log("Set active", event);
-  };
 
   scrollToTop = () => {
     scroll.scrollToTop();
