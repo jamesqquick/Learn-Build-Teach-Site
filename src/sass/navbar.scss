@@ -43,7 +43,6 @@
 
       & > a {
         font-weight: 300;
-
         &.active {
           border-bottom: 1px solid lighten($secondary, 30);
         }
@@ -84,11 +83,12 @@
           margin-left: 0;
           text-align: center;
           margin-bottom: 2rem;
-        }
 
-        a {
-          text-align: center;
-          font-size: 2.8rem;
+          a {
+            text-align: center;
+            font-size: 2.8rem;
+            display: block;
+          }
         }
       }
     }
