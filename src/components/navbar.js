@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
 import "../sass/navbar.scss";
 import logo from "../images/lbt-icon.svg";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { Link, animateScroll as scroll } from "react-scroll";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -12,13 +13,18 @@ class Navbar extends React.Component {
       navOpen: false
     };
   }
+
   render = () => (
-    <nav className={"nav" + (this.state.navOpen ? " open" : "")}>
+    <nav className={"nav" + (this.state.navOpen ? " open" : "")} id="navbar">
       <div className="nav-content">
         <div className="flex flex-between flex-align-center full-width">
           <div className="nav-brand">
-            <a href="#">
-              <img src={logo} alt="Learn Build Teach Logo." />
+            <a>
+              <img
+                src={logo}
+                alt="Learn Build Teach Logo."
+                onClick={this.scrollToTop}
+              />
             </a>
           </div>
           <a id="hamburgerBtn">
@@ -31,23 +37,46 @@ class Navbar extends React.Component {
         </div>
         <ul className={"nav-items" + (this.state.navOpen ? "" : " hidden-sm")}>
           <li className="nav-item">
-            <a href="#featured" onClick={this.toggleNavbar}>
+            <Link
+              activeClass="active"
+              to="featured"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onSetActive={this.handleSetActive}
+              onClick={this.closeNavbar}
+            >
               Featured
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#courses" onClick={this.toggleNavbar}>
+            <Link
+              activeClass="active"
+              to="courses"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onSetActive={this.handleSetActive}
+              onClick={this.closeNavbar}
+            >
               Courses
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
-              className="nav-btn"
-              href="#newsletter"
-              onClick={this.toggleNavbar}
+            <Link
+              activeClass="active"
+              to="newsletter"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onSetActive={this.handleSetActive}
+              onClick={this.closeNavbar}
             >
               Newsletter
-            </a>
+            </Link>
           </li>
           {/* <li className="nav-item">
             <a href="#contact">Contact</a>
@@ -56,6 +85,17 @@ class Navbar extends React.Component {
       </div>
     </nav>
   );
+
+  handleSetActive = event => {
+    console.log("Set active", event);
+  };
+
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+  closeNavbar = () => {
+    this.setState({ navOpen: false });
+  };
 
   toggleNavbar = () => {
     this.setState({
