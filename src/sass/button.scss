@@ -14,8 +14,9 @@
 }
 
 .btn:disabled {
-  background-color: lighten($primary, 40);
+  opacity: 0.25;
   cursor: not-allowed;
+  background-color: $primary;
 }
 
 .btn-lg {
