@@ -8,15 +8,16 @@
   font-size: 1.4rem;
 }
 
+.btn:hover {
+  cursor: pointer;
+  background-color: $primary-light;
+}
+
 .btn:disabled {
-  background-color: red;
+  background-color: lighten($primary, 40);
+  cursor: not-allowed;
 }
 
 .btn-lg {
   font-size: 1.8rem;
-}
-
-.btn:hover {
-  cursor: pointer;
-  background-color: $primary-light;
 }
