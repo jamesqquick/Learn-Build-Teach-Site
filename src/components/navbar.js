@@ -46,7 +46,7 @@ class Navbar extends React.Component {
               duration={500}
               onClick={this.closeNavbar}
             >
-              Featured Content
+              Featured
             </Link>
           </li>
           <li className="nav-item">
