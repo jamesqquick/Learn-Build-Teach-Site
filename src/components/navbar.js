@@ -42,7 +42,7 @@ class Navbar extends React.Component {
               to="featured"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-50}
               duration={500}
               onClick={this.closeNavbar}
             >
@@ -55,7 +55,7 @@ class Navbar extends React.Component {
               to="courses"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-50}
               duration={500}
               onClick={this.closeNavbar}
             >
@@ -63,17 +63,9 @@ class Navbar extends React.Component {
             </Link>
           </li>
           <li className="nav-item">
-            <Link
-              activeClass="active"
-              to="newsletter"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={this.closeNavbar}
-            >
-              Newsletter
-            </Link>
+            <a className="nav-btn" onClick={this.scrollToBottom}>
+              Subscribe
+            </a>
           </li>
           {/* <li className="nav-item">
             <a href="#contact">Contact</a>
@@ -85,6 +77,11 @@ class Navbar extends React.Component {
 
   scrollToTop = () => {
     scroll.scrollToTop();
+  };
+
+  scrollToBottom = () => {
+    console.log("scroll to bottom");
+    scroll.scrollToBottom();
   };
   closeNavbar = () => {
     this.setState({ navOpen: false });
