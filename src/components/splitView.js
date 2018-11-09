@@ -11,7 +11,7 @@ export default props => {
       <div className="right-content">
         <h2>{props.rightTitle}</h2>
         <p>{props.rightDescription}</p>
-        <Button btnText={props.btnText} />
+        <Button btnText={props.btnText} onBtnClick={props.onBtnClick} />
       </div>
     </div>
   );
