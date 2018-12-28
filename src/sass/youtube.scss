@@ -11,10 +11,48 @@
     & > img {
       height: auto;
       width: 100%;
+      &:hover {
+        @include hover;
+      }
     }
+  }
+}
+
+.fullscreen-video {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.9);
+
+  .video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #closeIcon {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    color: white;
 
     &:hover {
-      @include hover;
+      cursor: pointer;
     }
   }
 }
@@ -26,5 +64,26 @@
     & > .youtube-thumbnail {
       width: 100%;
     }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  #videoEmbed {
+    width: 560px;
+    height: 315px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #videoEmbed {
+    width: 420px;
+    height: 236px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #videoEmbed {
+    width: 315px;
+    height: 177;
   }
 }
