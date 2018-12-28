@@ -1,0 +1,30 @@
+@import "mixins";
+
+#youtubeGallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & > .youtube-thumbnail {
+    width: 32%;
+    margin-bottom: 2rem;
+    & > img {
+      height: auto;
+      width: 100%;
+    }
+
+    &:hover {
+      @include hover;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #youtubeGallery {
+    display: block;
+
+    & > .youtube-thumbnail {
+      width: 100%;
+    }
+  }
+}
