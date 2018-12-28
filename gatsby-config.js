@@ -21,14 +21,12 @@ module.exports = {
       }
     },
     "gatsby-plugin-offline",
-    "gatsby-plugin-sass",
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-130194764-1",
-        // Puts tracking script in the head instead of the body
-        head: true
-      }
-    }
+    "gatsby-plugin-sass"
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: "UA-130194764-1"
+    //   }
+    // }
   ]
 };

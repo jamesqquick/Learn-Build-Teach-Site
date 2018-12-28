@@ -30,6 +30,11 @@ const Layout = ({ children }) => (
             }
           ]}
         >
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-130194764-1"
+          />
+
           <html lang="en" />
           <meta
             name="google-site-verification"
