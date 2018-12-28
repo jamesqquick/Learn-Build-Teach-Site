@@ -1,12 +1,12 @@
 import React from "react";
-import Newsletter from "./newsletter";
 import "../sass/footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   faYoutube,
   faFacebook,
-  faTwitter
+  faTwitter,
+  faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function footer() {
@@ -23,6 +23,9 @@ export default function footer() {
           </a>
           <a href="https://www.twitter.com/jamesqquick">
             <FontAwesomeIcon icon={faTwitter} size="2x" />
+          </a>
+          <a href="https://www.instagram.com/learnbuildteach">
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
         </div>
       </div>
