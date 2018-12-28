@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { YouTubeThumbnail } from "./YouTubeThumbnail";
-
+import FullscreenVideo from "./FullscreenVideo";
 export default class YouTubeGallery extends Component {
   _isMounted = false;
 
   state = {
-    videos: null
+    videos: null,
+    selectedVideo: null
   };
   componentDidMount() {
     this._isMounted = true;
@@ -43,16 +44,35 @@ export default class YouTubeGallery extends Component {
   render() {
     return (
       <div className="container">
+        {!!this.state.selectedVideo && (
+          <FullscreenVideo
+            onClose={this.closeVideo}
+            video={this.state.selectedVideo}
+          />
+        )}
         <div id="youtubeGallery">
           {!this.state.videos ? (
             <p>Loading</p>
           ) : (
-            this.state.videos.map((video, index) => (
-              <YouTubeThumbnail video={video} key={video.id} />
+            this.state.videos.map(video => (
+              <YouTubeThumbnail
+                video={video}
+                key={video.id}
+                showFullscreenVideo={this.showFullscreenVideo}
+              />
             ))
           )}
         </div>
       </div>
     );
   }
+
+  closeVideo = () => {
+    console.log("closing video", this.state.showVideo);
+    this.setState({ selectedVideo: null });
+  };
+
+  showFullscreenVideo = video => {
+    this.setState({ selectedVideo: video });
+  };
 }
