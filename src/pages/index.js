@@ -29,14 +29,14 @@ const IndexPage = () => (
         <CourseList />
       </Section>
     </div>
-    <div id="newsletter">
-      <Section title="Newsletter" classString="section-dark">
-        <Newsletter />
+    <div id="recent">
+      <Section title="Recent Videos" classString="section-dark">
+        <YouTubeGallery />
       </Section>
     </div>
-    <div id="videos">
-      <Section title="Recent Videos">
-        <YouTubeGallery />
+    <div id="newsletter">
+      <Section title="Newsletter">
+        <Newsletter />
       </Section>
     </div>
   </Layout>

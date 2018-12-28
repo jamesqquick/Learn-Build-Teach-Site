@@ -62,6 +62,20 @@ class Navbar extends React.Component {
               Courses
             </Link>
           </li>
+
+          <li className="nav-item">
+            <Link
+              activeClass="active"
+              to="recent"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+              onClick={this.closeNavbar}
+            >
+              Recent
+            </Link>
+          </li>
           <li className="nav-item">
             <a className="nav-btn" onClick={this.scrollToBottom}>
               Subscribe
