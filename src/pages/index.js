@@ -5,6 +5,7 @@ import SplitContent from "../components/splitView";
 import { Section } from "../components/section";
 import CourseList from "../components/courseList";
 import Newsletter from "../components/newsletter";
+import YouTubeGallery from "../components/YouTubeGallery";
 const IndexPage = () => (
   <Layout>
     <Section>
@@ -28,10 +29,14 @@ const IndexPage = () => (
         <CourseList />
       </Section>
     </div>
-
     <div id="newsletter">
       <Section title="Newsletter" classString="section-dark">
         <Newsletter />
+      </Section>
+    </div>
+    <div id="videos">
+      <Section title="Recent Videos">
+        <YouTubeGallery />
       </Section>
     </div>
   </Layout>
