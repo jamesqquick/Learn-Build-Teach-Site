@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "gatsby-starter-default",
+        name: "Learn Build Teach",
         short_name: "starter",
         start_url: "/",
         background_color: "#663399",
@@ -21,7 +21,16 @@ module.exports = {
       }
     },
     "gatsby-plugin-offline",
-    "gatsby-plugin-sass" // {
+    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/md`,
+        name: "markdown-pages"
+      }
+    },
+    `gatsby-transformer-remark`
+    // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
     //     trackingId: "UA-130194764-1",

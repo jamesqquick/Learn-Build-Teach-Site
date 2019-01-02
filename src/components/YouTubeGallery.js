@@ -26,7 +26,6 @@ export default class YouTubeGallery extends Component {
           }))
           .filter(video => !!video.id) //filter videos with no id
           .splice(0, 12); //take the first 12 videos in case we removed duplicates
-        console.log(videos.length);
         if (this._isMounted) {
           this.setState({ videos });
         }

@@ -1,13 +1,7 @@
 import React from "react";
 import "../sass/youtube.scss";
-import FullscreenVideo from "./FullscreenVideo.js";
 export class YouTubeThumbnail extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render = () => {
-    console.log("rendering");
     return (
       <div
         className="youtube-thumbnail"
