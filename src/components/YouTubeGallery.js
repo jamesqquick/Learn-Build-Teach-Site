@@ -68,7 +68,6 @@ export default class YouTubeGallery extends Component {
   }
 
   closeVideo = () => {
-    console.log("closing video", this.state.showVideo);
     this.setState({ selectedVideo: null });
   };
 
