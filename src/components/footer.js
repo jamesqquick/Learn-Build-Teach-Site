@@ -14,7 +14,7 @@ export default function footer() {
     <footer>
       <div className="footer-content">
         <div className="text-center">
-          <p>Created by James Q Quick, @2018</p>
+          <p>Created by James Q Quick, @2019</p>
           <SocialFollow />
         </div>
       </div>
