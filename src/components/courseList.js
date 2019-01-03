@@ -6,7 +6,28 @@ import { StaticQuery, graphql } from "gatsby";
 const CourseList = props => {
   return (
     <StaticQuery
-      query={coursesQuery}
+      query={graphql`
+        query {
+          allMarkdownRemark(
+            sort: { fields: [frontmatter___createdDate], order: DESC }
+          ) {
+            edges {
+              node {
+                html
+                frontmatter {
+                  title
+                  path
+                  description
+                  id
+                  imageName
+                  url
+                  createdDate
+                }
+              }
+            }
+          }
+        }
+      `}
       render={data => (
         <div className="card-list">
           {data.allMarkdownRemark.edges.map(course => (
@@ -25,26 +46,3 @@ const CourseList = props => {
 };
 
 export default CourseList;
-
-export const coursesQuery = graphql`
-  query {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___createdDate], order: DESC }
-    ) {
-      edges {
-        node {
-          html
-          frontmatter {
-            title
-            path
-            description
-            id
-            imageName
-            url
-            createdDate
-          }
-        }
-      }
-    }
-  }
-`;
