@@ -1,13 +1,9 @@
 import React from "react";
 import Card from "./card";
 import "../sass/card.scss";
-import vsCodeCover from "../images/learn-vs-code-cover.svg";
-import coreFundamentalsCover from "../images/core-fundamentals-cover.svg";
-import chatAppCover from "../images/chat-app-cover.svg";
 import { StaticQuery, graphql } from "gatsby";
 
 const CourseList = props => {
-  console.log("***************************", props);
   return (
     <StaticQuery
       query={coursesQuery}
@@ -17,7 +13,7 @@ const CourseList = props => {
             <Card
               title={course.node.frontmatter.title}
               subtitle={course.node.frontmatter.description}
-              imgSrc={vsCodeCover}
+              imgName={course.node.frontmatter.imageName}
               overlayUrl={course.node.frontmatter.url}
               key={course.node.frontmatter.id}
             />
@@ -32,7 +28,9 @@ export default CourseList;
 
 export const coursesQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___createdDate], order: DESC }
+    ) {
       edges {
         node {
           html
@@ -41,7 +39,9 @@ export const coursesQuery = graphql`
             path
             description
             id
+            imageName
             url
+            createdDate
           }
         }
       }

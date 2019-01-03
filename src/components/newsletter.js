@@ -18,7 +18,7 @@ export default class Newsletter extends React.Component {
       <React.Fragment>
         {!subscribed ? (
           <form className="newsletter" onSubmit={this.onSubscribeClick}>
-            <p>
+            <p className="text-center">
               Subscribe to stay up to date with our latest content in Web
               Development, Design, and Tools!!
             </p>

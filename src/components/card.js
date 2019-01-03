@@ -1,6 +1,8 @@
 import React from "react";
+import { withPrefix } from "gatsby";
 
 export default function card(props) {
+  console.log(props.imgName);
   return (
     <div className="card">
       {props.overlayUrl && (
@@ -11,7 +13,7 @@ export default function card(props) {
         <p>{props.subtitle}</p>
       </div>
       <div className="card-image">
-        <img src={props.imgSrc} alt="" />
+        <img src={withPrefix(`/${props.imgName}`)} alt="" />
       </div>
     </div>
   );
