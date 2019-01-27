@@ -19,7 +19,8 @@ const IndexPage = () => (
           rightDescription="Visual Studio Code is the most popular text editor for Web Development.  Learning to harness its full power will drastically improve your efficiency and proficiency as a developer!"
           btnText="Check it Out!"
           onBtnClick={() => {
-            window.location.href = "https://www.learnvscode.com/";
+            window.location.href =
+              "https://www.udemy.com/learn-visual-studio-code";
           }}
         />
       </Section>
