@@ -11,28 +11,24 @@ export default class Newsletter extends React.Component {
     };
   }
   render() {
-    const validEmail = this.validateEmail(this.state.email);
-
     const { email, subscribed, errorMsg } = this.state;
     return (
       <React.Fragment>
         {!subscribed ? (
           <form className="newsletter" onSubmit={this.onSubscribeClick}>
-            <p className="text-center">
-              Subscribe to stay up to date with our latest content in Web
-              Development, Design, and Tools!!
-            </p>
+            <h2 className="title">
+              Subscribe for the latest articles, videos, and courses!
+            </h2>
+
             <div className="inline-form-input">
               <input
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder="Sign me up!"
                 onChange={this.onInputChange}
                 value={email}
               />
-              <button className="btn" disabled={!validEmail}>
-                Subscribe
-              </button>
+              <button className="btn btn-secondary">Subscribe</button>
             </div>
             {!!errorMsg ? <p className="text-danger">{errorMsg}</p> : ""}
           </form>
@@ -51,34 +47,37 @@ export default class Newsletter extends React.Component {
   onSubscribeClick = async e => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("/.netlify/functions/subscribe", {
-        method: "post",
-        body: JSON.stringify({
-          email: this.state.email
-        })
-      });
+    //Check for valid email
+    if (this.validateEmail(this.state.email)) {
+      try {
+        const response = await fetch("/.netlify/functions/subscribe", {
+          method: "post",
+          body: JSON.stringify({
+            email: this.state.email
+          })
+        });
 
-      var body = await response.json();
-      console.log("body", body);
+        var body = await response.json();
+        console.log("body", body);
 
-      if (response.status === 500) {
+        if (response.status === 500) {
+          //TODO: display popup message for failure
+          const errorMsg = body.msg;
+          console.log(errorMsg);
+          this.setState({
+            errorMsg
+          });
+        } else {
+          this.setState({
+            email: "",
+            subscribed: true,
+            errorMsg: null
+          });
+        }
+      } catch (err) {
         //TODO: display popup message for failure
-        const errorMsg = body.msg;
-        console.log(errorMsg);
-        this.setState({
-          errorMsg
-        });
-      } else {
-        this.setState({
-          email: "",
-          subscribed: true,
-          errorMsg: null
-        });
+        console.log("err", err);
       }
-    } catch (err) {
-      //TODO: display popup message for failure
-      console.log("err", err);
     }
   };
 

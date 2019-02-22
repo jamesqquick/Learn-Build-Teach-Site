@@ -8,9 +8,17 @@
   font-size: 1.4rem;
 }
 
+.btn-secondary {
+  background-color: $secondary;
+  border-radius: 0;
+}
+
 .btn:hover {
   cursor: pointer;
   background-color: $primary-light;
+}
+.btn-secondary:hover {
+  background-color: $secondary-light;
 }
 
 .btn:disabled {

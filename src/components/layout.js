@@ -26,7 +26,7 @@ const Layout = ({ children }) => (
             {
               name: "keywords",
               content:
-                "Web Development, Web Design, Web Tools, Learning Platform"
+                "Web Development, Design, Developer Tools, Learning Platform, Web Development Tutorials"
             }
           ]}
         >

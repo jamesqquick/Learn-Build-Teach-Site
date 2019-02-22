@@ -2,7 +2,10 @@ import React from "react";
 import "../sass/hero.scss";
 import Button from "./button";
 import HeroItem from "./heroItem";
-
+import learnIcon from "../images/learn-icon.svg";
+import biuldIcon from "../images/build-icon.svg";
+import teachIcon from "../images/teach-icon.svg";
+import Newsletter from "./newsletter";
 function onStartLearningClick() {
   console.log("clicked");
 }
@@ -12,30 +15,31 @@ export default () => {
     <div className="hero">
       <div className="hero-items">
         <HeroItem
-          title="Learn."
+          title="LEARN"
           subtitle="the latest and greatest technologies in our domain"
+          icon={learnIcon}
         />
+        <div className="divider" />
         <HeroItem
-          title="Build."
+          title="BUILD"
           subtitle="projects to reinfornce the things that we learned"
+          icon={biuldIcon}
         />
+        <div className="divider" />
         <HeroItem
-          title="Teach."
+          title="TEACH"
           subtitle="to help others in the community grow and learn"
+          icon={teachIcon}
         />
       </div>
 
-      <h4 className="hero-title">
+      {/* <h4 className="hero-title">
         Let's learn <span className="highlight">Web Development</span>,{" "}
         <span className="highlight">Design</span>, and{" "}
         <span className="highlight">Tools</span> together.
-      </h4>
+      </h4> */}
 
-      <div className="text-center">
-        <a href="#courses">
-          <Button btnText="Start Learning" onBtnClick={onStartLearningClick} />
-        </a>
-      </div>
+      <Newsletter />
     </div>
   );
 };
