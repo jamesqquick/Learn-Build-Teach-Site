@@ -11,7 +11,12 @@ export default props => {
       <div className="right-content">
         <h2>{props.rightTitle}</h2>
         <p>{props.rightDescription}</p>
-        <Button btnText={props.btnText} onBtnClick={props.onBtnClick} />
+        <a
+          className="btn"
+          href="https://www.udemy.com/learn-visual-studio-code/?couponCode=LEARNVSCODE10"
+        >
+          Check it Out!
+        </a>
       </div>
     </div>
   );

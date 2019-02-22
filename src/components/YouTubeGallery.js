@@ -62,6 +62,14 @@ export default class YouTubeGallery extends Component {
             ))
           )}
         </div>
+        <div className="text-center">
+          <a
+            className="btn btn-lg"
+            href="https://www.udemy.com/learn-visual-studio-code/?couponCode=LEARNVSCODE10"
+          >
+            View Channel!
+          </a>{" "}
+        </div>
       </div>
     );
   }
