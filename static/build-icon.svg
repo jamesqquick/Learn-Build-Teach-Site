@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>ruler and pencil</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-468.000000, -173.000000)" stroke="#2A2F38" stroke-width="2.60869565">
+            <g id="ruler-and-pencil" transform="translate(504.568542, 208.568542) rotate(-45.000000) translate(-504.568542, -208.568542) translate(464.568542, 168.568542)">
+                <g id="ruler" transform="translate(32.000000, 0.000000)">
+                    <path d="M6.47619048,66.5217391 L1.9047619,66.5217391" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M4.19047619,62.173913 L1.5774767,62.173913" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M4.19047619,72.6086957 L1.5774767,72.6086957" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M4.19047619,56.9565217 L1.5774767,56.9565217" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M6.47619048,50.8695652 L1.9047619,50.8695652" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M4.19047619,28.2608696 L1.5774767,28.2608696" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M6.47619048,23.0434783 L1.9047619,23.0434783" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M6.47619048,8.26086957 L1.9047619,8.26086957" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M4.19047619,18.6956522 L1.5774767,18.6956522" id="Line-3" stroke-linecap="square"></path>
+                    <path d="M4.19047619,13.4782609 L1.5774767,13.4782609" id="Line-3" stroke-linecap="square"></path>
+                    <polyline id="Path" points="15.2380952 45.2173913 15.2380952 80 0 80 0 45.2173913 0 45.2173913"></polyline>
+                    <polyline id="Path" transform="translate(7.619048, 16.956522) scale(1, -1) translate(-7.619048, -16.956522) " points="15.2380952 0 15.2380952 33.9130435 0 33.9130435 0 0 0 0"></polyline>
+                </g>
+                <g id="Pencil" transform="translate(40.000000, 41.304348) rotate(90.000000) translate(-40.000000, -41.304348) translate(32.000000, -4.347826)">
+                    <rect id="Rectangle" x="1.71101315" y="10.8402189" width="9.58178054" height="66.9565217" rx="0.869565217"></rect>
+                    <path d="M4.04851797,76.8310592 L3.48437298,87.1021825 L11.7910181,80.7760601 L4.04851797,76.8310592 Z" id="Rectangle" transform="translate(7.801824, 82.079610) rotate(-27.000000) translate(-7.801824, -82.079610) "></path>
+                    <path d="M6.50190342,31.271896 L6.50190342,76.0869565" id="Line" stroke-linecap="square"></path>
+                    <path d="M6.50190342,17.826087 L6.50190342,19.7914986" id="Line" stroke-linecap="square"></path>
+                    <path d="" id="Line" stroke-linecap="square" transform="translate(11.304348, 15.214286) rotate(90.000000) translate(-11.304348, -15.214286) "></path>
+                    <path d="M2.14635685,9.53276559 L10.7491562,9.53276559 C10.2174056,4.14884953 8.70844925,1.70667863 6.44775651,1.70667863 C4.18706378,1.70667863 2.67810748,4.14884953 2.14635685,9.53276559 Z" id="Rectangle"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
