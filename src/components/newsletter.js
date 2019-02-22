@@ -7,11 +7,12 @@ export default class Newsletter extends React.Component {
     this.state = {
       email: "",
       subscribed: false,
-      errorMsg: null
+      errorMsg: null,
+      shake: false
     };
   }
   render() {
-    const { email, subscribed, errorMsg } = this.state;
+    const { email, subscribed, errorMsg, shake } = this.state;
     return (
       <React.Fragment>
         {!subscribed ? (
@@ -28,7 +29,9 @@ export default class Newsletter extends React.Component {
                 onChange={this.onInputChange}
                 value={email}
               />
-              <button className="btn btn-secondary">Subscribe</button>
+              <button className={"btn btn-secondary" + (shake ? " shake" : "")}>
+                Subscribe
+              </button>
             </div>
             {!!errorMsg ? <p className="text-danger">{errorMsg}</p> : ""}
           </form>
@@ -78,6 +81,15 @@ export default class Newsletter extends React.Component {
         //TODO: display popup message for failure
         console.log("err", err);
       }
+    } else {
+      this.setState({
+        shake: true
+      });
+      setTimeout(() => {
+        this.setState({
+          shake: false
+        });
+      }, 1000);
     }
   };
 
