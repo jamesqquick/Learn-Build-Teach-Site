@@ -22,7 +22,7 @@ export default () => {
         <div className="divider" />
         <HeroItem
           title="BUILD"
-          subtitle="projects to reinfornce the things that we learned"
+          subtitle="projects to reinforce the things that we learned"
           icon={biuldIcon}
         />
         <div className="divider" />
