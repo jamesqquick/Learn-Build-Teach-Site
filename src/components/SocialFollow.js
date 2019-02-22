@@ -4,7 +4,8 @@ import {
   faYoutube,
   faFacebook,
   faTwitter,
-  faInstagram
+  faInstagram,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 import "../sass/socialFollow.scss";
 export default function SocialFollow() {
@@ -24,12 +25,12 @@ export default function SocialFollow() {
         >
           <FontAwesomeIcon icon={faFacebook} size="2x" />
         </a>
-        {/* <a
+        <a
           href="https://www.twitter.com/jamesqquick"
           className="twitter social"
         >
           <FontAwesomeIcon icon={faTwitter} size="2x" />
-        </a> */}
+        </a>
         <a
           href="https://www.instagram.com/learnbuildteach"
           className="instagram social"

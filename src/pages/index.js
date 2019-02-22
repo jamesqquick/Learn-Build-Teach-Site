@@ -35,11 +35,6 @@ const IndexPage = () => (
         <YouTubeGallery />
       </Section>
     </div>
-    <div id="newsletter">
-      <Section title="Newsletter">
-        <Newsletter />
-      </Section>
-    </div>
   </Layout>
 );
 

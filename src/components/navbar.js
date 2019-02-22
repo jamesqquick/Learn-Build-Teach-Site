@@ -76,11 +76,7 @@ class Navbar extends React.Component {
               Recent
             </Link>
           </li>
-          <li className="nav-item">
-            <a className="nav-btn" onClick={this.scrollToBottom}>
-              Subscribe
-            </a>
-          </li>
+
           {/* <li className="nav-item">
             <a href="#contact">Contact</a>
           </li> */}
