@@ -22,6 +22,9 @@ const CourseList = props => {
                   imageName
                   url
                   createdDate
+                  hours
+                  videos
+                  tag
                 }
               }
             }
@@ -36,6 +39,9 @@ const CourseList = props => {
               subtitle={course.node.frontmatter.description}
               imgName={course.node.frontmatter.imageName}
               overlayUrl={course.node.frontmatter.url}
+              hours={course.node.frontmatter.hours}
+              videos={course.node.frontmatter.videos}
+              tag={course.node.frontmatter.tag}
               key={course.node.frontmatter.id}
             />
           ))}

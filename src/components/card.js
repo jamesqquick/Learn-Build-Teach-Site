@@ -3,17 +3,20 @@ import { withPrefix } from "gatsby";
 
 export default function card(props) {
   console.log(props.imgName);
+  const { overlayUrl, title, subtitle, imgName, videos, hours, tag } = props;
   return (
     <div className="card">
-      {props.overlayUrl && (
-        <a className="card-overlay" href={props.overlayUrl} />
-      )}
+      <div className="tag">{tag}</div>
+      {overlayUrl && <a className="card-overlay" href={overlayUrl} />}
       <div className="card-content">
-        <h3>{props.title}</h3>
-        <p>{props.subtitle}</p>
+        <h3>{title}</h3>
+        <p>{subtitle}</p>
+        <p>
+          <strong>{videos}</strong> videos <strong>{hours}</strong> hours
+        </p>
       </div>
       <div className="card-image">
-        <img src={withPrefix(`/${props.imgName}`)} alt="" />
+        <img src={withPrefix(`/${imgName}`)} alt="" />
       </div>
     </div>
   );
