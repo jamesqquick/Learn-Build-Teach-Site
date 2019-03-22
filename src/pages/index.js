@@ -4,7 +4,6 @@ import Layout from "../components/layout";
 import SplitContent from "../components/splitView";
 import { Section } from "../components/section";
 import CourseList from "../components/courseList";
-import Newsletter from "../components/newsletter";
 import YouTubeGallery from "../components/YouTubeGallery";
 const IndexPage = () => (
   <Layout>

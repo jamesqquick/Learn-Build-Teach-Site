@@ -1,6 +1,5 @@
 import React from "react";
 import "../sass/splitView.scss";
-import Button from "./button";
 
 export default props => {
   return (

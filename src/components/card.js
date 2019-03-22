@@ -2,7 +2,6 @@ import React from "react";
 import { withPrefix } from "gatsby";
 
 export default function card(props) {
-  console.log(props.imgName);
   const { overlayUrl, title, subtitle, imgName, videos, hours, tag } = props;
   return (
     <div className="card">
