@@ -65,7 +65,7 @@ export default class YouTubeGallery extends Component {
         <div className="text-center">
           <a
             className="btn btn-lg"
-            href="https://www.udemy.com/learn-visual-studio-code/?couponCode=LEARNVSCODE10"
+            href="https://www.youtube.com/c/jamesqquick"
           >
             View Channel!
           </a>{" "}
