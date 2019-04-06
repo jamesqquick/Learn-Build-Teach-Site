@@ -1,6 +1,6 @@
 import React from "react";
 import "../sass/newsletter.scss";
-
+import { Button } from "../elements/Button";
 export default class Newsletter extends React.Component {
   constructor(props) {
     super(props);
@@ -29,9 +29,9 @@ export default class Newsletter extends React.Component {
                 onChange={this.onInputChange}
                 value={email}
               />
-              <button className={"btn btn-secondary" + (shake ? " shake" : "")}>
+              <Button type="secondary" className={shake ? " shake" : ""}>
                 Subscribe
-              </button>
+              </Button>
             </div>
             {!!errorMsg ? <p className="text-danger">{errorMsg}</p> : ""}
           </form>
