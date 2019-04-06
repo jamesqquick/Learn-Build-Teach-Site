@@ -38,8 +38,8 @@ export const Button = styled.button`
 export const LinkButton = styled.a`
   height: 40px;
   border: none;
-  background-color: ${primary};
-  color: white;
+  background-color: ${primaryLight};
+  color: white !important;
   padding: 10px 20px;
   border-radius: 3px;
   font-size: 16px;
@@ -48,6 +48,6 @@ export const LinkButton = styled.a`
   &:hover {
     cursor: pointer;
     transform: scale(1.02);
-    background-color: ${secondary};
+    background-color: ${primary};
   }
 `;

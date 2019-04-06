@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { YouTubeThumbnail } from "./YouTubeThumbnail";
 import FullscreenVideo from "./FullscreenVideo";
+import { LinkButton } from "../elements/Button";
 export default class YouTubeGallery extends Component {
   _isMounted = false;
 
@@ -63,12 +64,12 @@ export default class YouTubeGallery extends Component {
           )}
         </div>
         <div className="text-center">
-          <a
+          <LinkButton
             className="btn btn-lg"
             href="https://www.youtube.com/c/jamesqquick"
           >
             View Channel!
-          </a>{" "}
+          </LinkButton>{" "}
         </div>
       </div>
     );
