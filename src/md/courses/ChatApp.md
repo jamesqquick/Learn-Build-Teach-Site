@@ -6,6 +6,7 @@ description: "In this mini course, we are going to Design and Build a chat appli
 id: "2"
 url: "https://www.youtube.com/playlist?list=PLDlWc9AfQBfbyGwhSlxg16mQGpGnauCwq"
 imageName: "chat-app-cover.svg"
+imageAlt: "Chat App Cover"
 videos: "9"
 hours: "2"
 tag: "FREE"

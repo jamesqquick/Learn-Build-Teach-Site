@@ -6,6 +6,7 @@ description: "In this course, we will use pure HTML, CSS, and Javascript (no lib
 id: "1"
 url: "https://www.youtube.com/playlist?list=PLDlWc9AfQBfaO1IX02_1L5MW2s9RyIgQ7"
 imageName: "core-fundamentals-cover.svg"
+imageAlt: "Core Fundamentals App Cover"
 videos: "17"
 hours: "4"
 tag: "FREE"

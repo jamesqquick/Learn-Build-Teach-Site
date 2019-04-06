@@ -21,7 +21,7 @@ export const Button = styled.button`
   color: ${offWhite} !important;
   font-size: 1.4rem;
   transition: background-color 250ms;
-  font-size: ${props => fontSizesMap[props.size] || "14px"}
+  font-size: ${props => fontSizesMap[props.size] || "14px"};
 
   &:hover {
     cursor: pointer;

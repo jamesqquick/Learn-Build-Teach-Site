@@ -6,6 +6,7 @@ description: "Visual Studio Code is the most popular text editor for Web Develop
 id: "3"
 url: "https://www.udemy.com/learn-visual-studio-code"
 imageName: "learn-vs-code-cover.svg"
+imageAlt: "Learn VS Code Cover"
 videos: "30"
 hours: "4"
 tag: "PREMIUM"

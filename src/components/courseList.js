@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "./card";
-import "../sass/card.scss";
 import { StaticQuery, graphql } from "gatsby";
 
 const CourseList = props => {
@@ -20,6 +19,7 @@ const CourseList = props => {
                   description
                   id
                   imageName
+                  imageAlt
                   url
                   createdDate
                   hours
@@ -33,18 +33,37 @@ const CourseList = props => {
       `}
       render={data => (
         <div className="card-list">
-          {data.allMarkdownRemark.edges.map(course => (
-            <Card
-              title={course.node.frontmatter.title}
-              subtitle={course.node.frontmatter.description}
-              imgName={course.node.frontmatter.imageName}
-              overlayUrl={course.node.frontmatter.url}
-              hours={course.node.frontmatter.hours}
-              videos={course.node.frontmatter.videos}
-              tag={course.node.frontmatter.tag}
-              key={course.node.frontmatter.id}
-            />
-          ))}
+          {data.allMarkdownRemark.edges.map(course => {
+            const {
+              title,
+              description,
+              imageName,
+              imageAlt,
+              url,
+              hours,
+              videos,
+              tag,
+              id
+            } = course.node.frontmatter;
+            return (
+              <Card
+                imgName={imageName}
+                imageAlt={imageAlt}
+                overlayUrl={url}
+                tag={tag}
+                key={id}
+              >
+                <div>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                  <p>
+                    <strong>{videos}</strong> videos <strong>{hours}</strong>{" "}
+                    hours
+                  </p>
+                </div>
+              </Card>
+            );
+          })}
         </div>
       )}
     />
