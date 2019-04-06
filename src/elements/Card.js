@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  primary,
-  primaryLight,
-  offWhite,
-  secondary,
-  secondaryLight
-} from "../utilities/Colors";
+import { secondary } from "../utilities/Colors";
 import { hover } from "../utilities/Mixins";
 
 export const StyledCard = styled.div`

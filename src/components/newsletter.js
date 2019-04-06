@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "../sass/newsletter.scss";
 import { Button } from "../elements/Button";
+import * as EmailValidator from "email-validator";
+
 export default class Newsletter extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +16,7 @@ export default class Newsletter extends React.Component {
   render() {
     const { email, subscribed, errorMsg, shake } = this.state;
     return (
-      <React.Fragment>
+      <Fragment>
         {!subscribed ? (
           <form className="newsletter" onSubmit={this.onSubscribeClick}>
             <h2 className="title">
@@ -38,20 +40,15 @@ export default class Newsletter extends React.Component {
         ) : (
           <h2 className="text-center">Thanks for subscribing!</h2>
         )}
-      </React.Fragment>
+      </Fragment>
     );
   }
-
-  validateEmail = email => {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-  };
 
   onSubscribeClick = async e => {
     e.preventDefault();
 
     //Check for valid email
-    if (this.validateEmail(this.state.email)) {
+    if (EmailValidator.validate(this.state.email)) {
       try {
         const response = await fetch("/.netlify/functions/subscribe", {
           method: "post",

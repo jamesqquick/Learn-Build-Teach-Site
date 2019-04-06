@@ -5,25 +5,21 @@ import SplitContent from "../components/splitView";
 import { Section } from "../components/section";
 import CourseList from "../components/courseList";
 import YouTubeGallery from "../components/YouTubeGallery";
+import { FeaturedLeft, FeaturedRight } from "../components/Featured";
+
 const IndexPage = () => (
   <Layout>
     <Section>
       <Hero />
     </Section>
-    <div id="featured">
-      <Section classString="section-dark section-full">
-        <SplitContent
-          leftTitle="Featured Content"
-          rightTitle="Learn VS Code"
-          rightDescription="Visual Studio Code is the most popular text editor for Web Development.  Learning to harness its full power will drastically improve your efficiency and proficiency as a developer!"
-          btnText="Check it Out!"
-          onBtnClick={() => {
-            window.location.href =
-              "https://www.udemy.com/learn-visual-studio-code";
-          }}
-        />
-      </Section>
-    </div>
+    <SplitContent>
+      <FeaturedLeft title="Featured Content"/>
+      <FeaturedRight 
+        title="Learn VS Code" 
+        description="Visual Studio Code is the most popular text editor for Web Development.  Learning to harness its full power will drastically improve your efficiency and proficiency as a developer!"
+        linkUrl="https://www.udemy.com/learn-visual-studio-code/?couponCode=LEARNVSCODE10"
+      />
+    </SplitContent>
     <div id="courses">
       <Section title="Start Learning!">
         <CourseList />
