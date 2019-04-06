@@ -1,5 +1,4 @@
 import React from "react";
-import "../sass/splitView.scss";
 import {StyledSplitView} from "../elements/SplitView"
 export default props => {
   return (
