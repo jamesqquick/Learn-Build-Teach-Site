@@ -7,37 +7,38 @@ import {
   faInstagram,
   faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
-import "../sass/socialFollow.scss";
+import {StyledSocialFollow, SocialFollowIcon} from "../elements/SocialFollow";
+import {StyledFlex} from "../elements/Flexbox";
 export default function SocialFollow() {
   return (
-    <div className="social-follow">
+    <StyledSocialFollow >
       <h3>@LearnBuildTeach</h3>
-      <div className="flex justify-content-center">
-        <a
+      <StyledFlex>
+        <SocialFollowIcon
           href="https://www.youtube.com/c/jamesqquick"
-          className="youtube social"
+          type="youtube"
         >
           <FontAwesomeIcon icon={faYoutube} size="2x" />
-        </a>
-        <a
+        </SocialFollowIcon>
+        <SocialFollowIcon
           href="https://www.facebook.com/learnbuildteach/"
-          className="facebook social"
+          type="facebook"
+
         >
           <FontAwesomeIcon icon={faFacebook} size="2x" />
-        </a>
-        <a
+        </SocialFollowIcon>
+        <SocialFollowIcon
           href="https://www.twitter.com/jamesqquick"
-          className="twitter social"
+          type="twitter"
         >
           <FontAwesomeIcon icon={faTwitter} size="2x" />
-        </a>
-        <a
+        </SocialFollowIcon>
+        <SocialFollowIcon
           href="https://www.instagram.com/learnbuildteach"
-          className="instagram social"
         >
           <FontAwesomeIcon icon={faInstagram} size="2x" />
-        </a>
-      </div>
-    </div>
+        </SocialFollowIcon>
+      </StyledCenterFlex>
+    </StyledSocialFollow>
   );
 }
