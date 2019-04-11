@@ -38,7 +38,7 @@ export default function SocialFollow() {
         >
           <FontAwesomeIcon icon={faInstagram} size="2x" />
         </SocialFollowIcon>
-      </StyledCenterFlex>
+      </StyledFlex>
     </StyledSocialFollow>
   );
 }
