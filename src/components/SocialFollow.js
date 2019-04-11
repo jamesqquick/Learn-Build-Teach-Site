@@ -4,8 +4,7 @@ import {
   faYoutube,
   faFacebook,
   faTwitter,
-  faInstagram,
-  faLinkedin
+  faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 import {StyledSocialFollow, SocialFollowIcon} from "../elements/SocialFollow";
 import {StyledFlex} from "../elements/Flexbox";

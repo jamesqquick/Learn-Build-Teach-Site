@@ -1,14 +1,11 @@
 import React from "react";
 import "../sass/hero.scss";
-import Button from "./button";
 import HeroItem from "./heroItem";
 import learnIcon from "../images/learn-icon.svg";
 import biuldIcon from "../images/build-icon.svg";
 import teachIcon from "../images/teach-icon.svg";
 import Newsletter from "./newsletter";
-function onStartLearningClick() {
-  console.log("clicked");
-}
+
 
 export default () => {
   return (

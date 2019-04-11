@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { primary } from "../utilities/Colors";
-import { hover } from "../utilities/Mixins";
 
 export const StyledFeatureTitle = styled.div`
 
