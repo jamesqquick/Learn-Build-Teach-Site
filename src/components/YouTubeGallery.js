@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { YouTubeThumbnail } from "./YouTubeThumbnail";
 import FullscreenVideo from "./FullscreenVideo";
 import { LinkButton } from "../elements/Button";
+import {StyledGallery} from "../elements/Gallery"
 export default class YouTubeGallery extends Component {
   _isMounted = false;
 
@@ -50,7 +51,7 @@ export default class YouTubeGallery extends Component {
             video={this.state.selectedVideo}
           />
         )}
-        <div id="youtubeGallery">
+        <StyledGallery >
           {!this.state.videos ? (
             <p>Loading</p>
           ) : (
@@ -62,7 +63,7 @@ export default class YouTubeGallery extends Component {
               />
             ))
           )}
-        </div>
+        </StyledGallery>
         <div className="text-center">
           <LinkButton
             className="btn btn-lg"

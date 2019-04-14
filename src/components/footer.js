@@ -1,13 +1,13 @@
 import React from "react";
-import "../sass/footer.scss";
 import SocialFollow from "./SocialFollow";
+import { Footer } from "../elements/Footer";
 
 export default function footer() {
   return (
-    <footer>
+    <Footer>
       <div className="footer-content">
         <SocialFollow />
       </div>
-    </footer>
+    </Footer>
   );
 }

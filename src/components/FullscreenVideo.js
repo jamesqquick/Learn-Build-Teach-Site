@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import {StyledFullScreenVideo} from "../elements/FullScreenVideo";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 export default function FullscreenVideo({ video, onClose }) {
   return (
-    <div className="fullscreen-video">
+    <StyledFullScreenVideo >
       <FontAwesomeIcon
         id="closeIcon"
         icon={faTimes}
@@ -32,6 +32,6 @@ export default function FullscreenVideo({ video, onClose }) {
           title={video.title}
         />
       </div>
-    </div>
+    </StyledFullScreenVideo>
   );
 }

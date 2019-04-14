@@ -1,14 +1,14 @@
 import React from "react";
-import "../sass/youtube.scss";
+import { StyledImageCard } from "../elements/Card";
 export class YouTubeThumbnail extends React.Component {
   render = () => {
     return (
-      <div
+      <StyledImageCard
         className="youtube-thumbnail"
         onClick={() => this.props.showFullscreenVideo(this.props.video)}
       >
         <img src={this.props.video.thumbnail} alt="" />
-      </div>
+      </StyledImageCard>
     );
   };
 }

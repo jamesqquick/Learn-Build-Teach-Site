@@ -28,6 +28,23 @@ export const StyledCard = styled.div`
   }
 `;
 
+export const StyledImageCard = styled.div`
+    width: 32%;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    & > img {
+      height: auto;
+      width: 100%;
+      max-width: 400px;
+       &:hover {
+        ${hover}
+      }
+    }
+`
+
+
+
 export const CardContent = styled.div`
   padding: 2rem;
   width: 60%;

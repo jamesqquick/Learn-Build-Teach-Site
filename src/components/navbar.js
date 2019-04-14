@@ -1,9 +1,8 @@
 import React from "react";
-import "../sass/navbar.scss";
 import logo from "../images/lbt-icon.svg";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import {StyledNavbar } from "../elements/Navbar";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 class Navbar extends React.Component {
@@ -15,7 +14,7 @@ class Navbar extends React.Component {
   }
 
   render = () => (
-    <nav className={"nav" + (this.state.navOpen ? " open" : "")} id="navbar">
+    <StyledNavbar className={"nav" + (this.state.navOpen ? " open" : "")} id="navbar">
       <div className="nav-content">
         <div className="flex flex-between flex-align-center full-width">
           <div className="nav-brand">
@@ -82,7 +81,7 @@ class Navbar extends React.Component {
           </li> */}
         </ul>
       </div>
-    </nav>
+    </StyledNavbar>
   );
 
   scrollToTop = () => {

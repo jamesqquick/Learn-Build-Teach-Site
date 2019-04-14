@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import "../sass/newsletter.scss";
 import { Button } from "../elements/Button";
 import * as EmailValidator from "email-validator";
-
+import { StyledForm } from "../elements/Forms";
 export default class Newsletter extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +18,7 @@ export default class Newsletter extends React.Component {
     return (
       <Fragment>
         {!subscribed ? (
-          <form className="newsletter" onSubmit={this.onSubscribeClick}>
+          <StyledForm className="newsletter" onSubmit={this.onSubscribeClick}>
             <h2 className="title">
               Subscribe for the latest articles, videos, and courses!
             </h2>
@@ -36,7 +36,7 @@ export default class Newsletter extends React.Component {
               </Button>
             </div>
             {!!errorMsg ? <p className="text-danger">{errorMsg}</p> : ""}
-          </form>
+          </StyledForm>
         ) : (
           <h2 className="text-center">Thanks for subscribing!</h2>
         )}
