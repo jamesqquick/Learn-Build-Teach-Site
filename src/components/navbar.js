@@ -18,7 +18,7 @@ class Navbar extends React.Component {
       <div className="nav-content">
         <div className="flex flex-between flex-align-center full-width">
           <div className="nav-brand">
-            <a>
+            <a href="#">
               <img
                 src={logo}
                 alt="Learn Build Teach Logo."
@@ -26,13 +26,13 @@ class Navbar extends React.Component {
               />
             </a>
           </div>
-          <a id="hamburgerBtn">
+          <div id="hamburgerBtn">
             <FontAwesomeIcon
               icon={this.state.navOpen ? faTimes : faBars}
               size="2x"
               onClick={this.toggleNavbar}
             />
-          </a>
+          </div>
         </div>
         <ul className={"nav-items" + (this.state.navOpen ? "" : " hidden-sm")}>
           <li className="nav-item">

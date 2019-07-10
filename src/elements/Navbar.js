@@ -28,6 +28,9 @@ export const StyledNavbar = styled.nav`
 
     #hamburgerBtn {
     display: none;
+        &:hover {
+            cursor:pointer;
+        }
     }
 
     @media only screen and (max-width: 768px) {
