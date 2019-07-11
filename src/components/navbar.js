@@ -16,8 +16,7 @@ class Navbar extends React.Component {
   render = () => (
     <StyledNavbar className={"nav" + (this.state.navOpen ? " open" : "")} id="navbar">
       <div className="nav-content">
-        <div className="flex flex-between flex-align-center full-width">
-          <div className="nav-brand">
+        <div className="brand-container">
             <a href="#">
               <img
                 src={logo}
@@ -25,7 +24,6 @@ class Navbar extends React.Component {
                 onClick={this.scrollToTop}
               />
             </a>
-          </div>
           <div id="hamburgerBtn">
             <FontAwesomeIcon
               icon={this.state.navOpen ? faTimes : faBars}

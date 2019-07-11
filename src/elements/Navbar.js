@@ -19,6 +19,13 @@ export const StyledNavbar = styled.nav`
         align-items: center;
         height: 100%;
 
+        .brand-container {
+            display: flex;
+            justify-content: space-between;
+            width:100%;
+            align-items:center;
+        }
+
         .nav-item {
             display: inline;
             margin-left: 2rem;
