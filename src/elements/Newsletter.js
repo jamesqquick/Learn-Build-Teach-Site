@@ -1,4 +1,9 @@
-.newsletter {
+import styled from "styled-components";
+
+
+export const StyledNewsletter = styled.div`
+
+    .newsletter {
   max-width: 500px;
   margin: 0 auto;
 
@@ -31,3 +36,4 @@
     margin-bottom: 1rem;
   }
 }
+`;

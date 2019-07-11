@@ -4,8 +4,7 @@ import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import Footer from "./footer";
 import Navbar from "./navbar";
-import "../sass/index.scss";
-
+import GlobalStyle from "../elements/Global";
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -36,6 +35,7 @@ const Layout = ({ children }) => (
             content="amnHMJR_lUGMcft9nnf5BzMxT9Ifai5iUQjcvWpIofs"
           />
         </Helmet>
+        <GlobalStyle/>
         <Navbar siteTitle={data.site.siteMetadata.title} />
         <div>{children}</div>
         <Footer />

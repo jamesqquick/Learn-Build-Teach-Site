@@ -1,16 +1,14 @@
-@import "variables";
+import styled from "styled-components";
 
-@mixin section() {
-  padding: 12rem 5rem;
-  background-color: $off-white;
-}
 
-.section {
-  @include section();
-}
+export const StyledSection = styled.section`
+
+
+padding: 12rem 5rem;
+  background-color: #fafafa;
 
 .section-dark {
-  background-color: $light-grey;
+  background-color: #eaeaea;
 }
 
 .section-full {
@@ -29,3 +27,5 @@
     padding: 0;
   }
 }
+
+`;
