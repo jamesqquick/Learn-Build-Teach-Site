@@ -1,5 +1,5 @@
 import { createGlobalStyle} from "styled-components";
-
+import { black } from "../utilities/Colors";
 const GlobalStyle = createGlobalStyle`
     
     * {
@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
 
     html {
         font-size: 10px;
-        font-family: sans-serif;
+        font-family: roboto;
     }
 
     body {
@@ -18,9 +18,13 @@ const GlobalStyle = createGlobalStyle`
     h1,
     h2,
     h3,
-    h4,
+    h4{
+        color: ${black};
+        font-family: oswald;
+    }
+
     p {
-        color: $primary;
+        color: ${black};
     }
 
     p,
@@ -35,25 +39,25 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
-        font-size: 4.8rem;
-        font-weight: 300;
+        font-size: 5.4rem;
+        font-weight: 700;
         margin: 0;
     }
 
     h2 {
-        font-size: 3.2rem;
-        font-weight: 500;
+        font-size: 4.2rem;
+        font-weight: 700;
         margin: 0;
     }
 
     h3 {
-        font-size: 2.8rem;
+        font-size: 3.6rem;
         margin-bottom: 2rem;
         font-weight: 300;
     }
 
     h4 {
-        font-size: 2.4rem;
+        font-size: 2.8rem;
         margin-bottom: 2rem;
     }
 

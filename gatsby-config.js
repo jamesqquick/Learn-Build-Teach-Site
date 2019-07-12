@@ -41,6 +41,16 @@ module.exports = {
         respectDNT: true
       }
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `oswald\:300,500,700`,
+          `roboto\:300,500,700`
+        ],
+        display: 'swap'
+      }
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
@@ -48,7 +58,7 @@ module.exports = {
     //     path: `${__dirname}/src/images`
     //   }
     // },
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
     // `gatsby-transformer-sharp`,
     // `gatsby-plugin-sharp`
     // {

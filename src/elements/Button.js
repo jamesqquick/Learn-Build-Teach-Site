@@ -2,10 +2,13 @@ import styled from "styled-components";
 import {
   primary,
   primaryLight,
-  offWhite,
+  primaryDark,
+  white,
   secondary,
-  secondaryLight
+  secondaryDark
 } from "../utilities/Colors";
+import { hover, shadow } from "../utilities/Mixins";
+
 
 const fontSizesMap = {
   sm: "12px",
@@ -15,18 +18,19 @@ const fontSizesMap = {
 
 export const Button = styled.button`
   padding: 1rem 3rem;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: ${props =>
-    props.type === "primary" ? primaryLight : secondaryLight};
-  color: ${offWhite} !important;
+    props.type === "primary" ? primary : secondary};
+  color: ${white} !important;
   font-size: 1.4rem;
   transition: background-color 250ms;
-  font-size: ${props => fontSizesMap[props.size] || "14px"};
-
+  font-size: ${props => fontSizesMap[props.size] || "16px"};
+    ${shadow}
   &:hover {
     cursor: pointer;
     background-color: ${props =>
-      props.type === "primary" ? primary : secondary};
+      props.type === "primary" ? primaryDark : secondaryDark};
+      ${hover};
   }
 
   &:disabled {
@@ -36,18 +40,19 @@ export const Button = styled.button`
 `;
 
 export const LinkButton = styled.a`
-  height: 40px;
   border: none;
-  background-color: ${primaryLight};
+  background-color: ${primary};
   color: white !important;
   padding: 10px 20px;
-  border-radius: 3px;
+  border-radius: 5px;
   font-size: 16px;
   text-decoration: none;
-
+  display: inline-block;
+  ${shadow}
   &:hover {
     cursor: pointer;
     transform: scale(1.02);
-    background-color: ${primary};
+    background-color: ${primaryDark};
+    ${hover}
   }
 `;

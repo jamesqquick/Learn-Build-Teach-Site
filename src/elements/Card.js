@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { secondary } from "../utilities/Colors";
-import { hover } from "../utilities/Mixins";
+import { hover, shadow } from "../utilities/Mixins";
 
 export const StyledCard = styled.div`
   background: white;
@@ -13,7 +13,7 @@ export const StyledCard = styled.div`
   margin: 0 auto;
   margin-bottom: 2rem;
   position: relative;
-
+  ${shadow}
   &:hover {
     ${hover}
   }

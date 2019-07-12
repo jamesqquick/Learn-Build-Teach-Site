@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { offWhite, lightGrey } from "../utilities/Colors";
+import { white, lightGrey } from "../utilities/Colors";
 
 export const StyledNavbar = styled.nav`
-    background-color: ${offWhite};
+    background-color: ${white};
     position: sticky;
     top: 0px;
     width: 100%;

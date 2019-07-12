@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import {offWhite} from "../utilities/Colors";
+import {white} from "../utilities/Colors";
 
 
 export const Footer = styled.footer`
     padding: 1rem 3rem;
-    background-color: ${offWhite};
+    background-color: ${white};
 
     & > svg {
         margin: 0 1rem;
