@@ -34,6 +34,7 @@ export default function SocialFollow() {
         </SocialFollowIcon>
         <SocialFollowIcon
           href="https://www.instagram.com/learnbuildteach"
+          type="instagram"
         >
           <FontAwesomeIcon icon={faInstagram} size="2x" />
         </SocialFollowIcon>

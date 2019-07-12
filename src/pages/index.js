@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../components/hero";
+import Header from "../components/header";
 import Layout from "../components/layout";
 import { Section } from "../components/section";
 import CourseList from "../components/courseList";
@@ -8,7 +8,7 @@ import { StyledNewsletter } from "../elements/Newsletter"
 const IndexPage = () => (
   <Layout>
     <Section>
-      <Hero />
+      <Header />
     </Section>
     <div id="courses">
       <Section title="Start Learning!">

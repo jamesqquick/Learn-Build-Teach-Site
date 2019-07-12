@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { white, lightGrey } from "../utilities/Colors";
-
+import { white, lightGrey, backgroundDark } from "../utilities/Colors";
+import {shadow} from "../utilities/Mixins";
 export const StyledNavbar = styled.nav`
-    background-color: ${white};
+    background-color: ${backgroundDark};
+    color: ${white};
     position: sticky;
     top: 0px;
     width: 100%;
     height: 80px;
     z-index: 1000;
-    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+    ${shadow}
 
     .nav-content {
         max-width: 1400px;
@@ -19,15 +20,7 @@ export const StyledNavbar = styled.nav`
         align-items: center;
         height: 100%;
 
-        .brand-container {
-            display: flex;
-            justify-content: space-between;
-            width:100%;
-            align-items:center;
-        }
-
         .nav-item {
-            display: inline;
             margin-left: 2rem;
             color: $black;
         }
@@ -44,6 +37,7 @@ export const StyledNavbar = styled.nav`
         position: static;
         height: auto;
         padding: 1rem 0;
+        opacity: 0.99;
 
         &.open {
             position: fixed;
@@ -51,35 +45,30 @@ export const StyledNavbar = styled.nav`
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: ${lightGrey};
+            background-color: ${backgroundDark};
+
+            #navBrand {
+                display: none;
+            }
 
             .nav-content {
-                justify-content: flex-start;
 
-                .nav-items {
-                    align-self: stretch;
-                    padding-left: 0;
-                    margin-top: 5rem;
-
+                #hamburgerBtn {
+                    position: absolute;
+                    top: 2rem;
+                    right: 2rem;
                 }
-            }
-        }
+                .nav-items {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width:100%;
 
-        .nav-content {
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
-             
-            .nav-item {
-                display: block;
-                margin-bottom: 3rem;
-                margin-left: 0;
-                text-align: center;
-            }
-
-            .nav-item > a {
-                font-size: 3.2rem;
-                display: block;
+                    .nav-item {
+                        font-size: 2.4rem;
+                        margin-bottom: 2rem;
+                    }
+                }
             }
         }
 

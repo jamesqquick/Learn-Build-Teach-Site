@@ -16,8 +16,7 @@ class Navbar extends React.Component {
   render = () => (
     <StyledNavbar className={"nav" + (this.state.navOpen ? " open" : "")} id="navbar">
       <div className="nav-content">
-        <div className="brand-container">
-            <a href="#">
+            <a href="#" id="navBrand">
               <img
                 src={logo}
                 alt="Learn Build Teach Logo."
@@ -27,28 +26,26 @@ class Navbar extends React.Component {
           <div id="hamburgerBtn">
             <FontAwesomeIcon
               icon={this.state.navOpen ? faTimes : faBars}
-              size="2x"
+              size="3x"
               onClick={this.toggleNavbar}
             />
           </div>
-        </div>
         <ul className={"nav-items" + (this.state.navOpen ? "" : " hidden-sm")}>
-          <li className="nav-item">
             <Link
               activeClass="active"
-              to="featured"
+              className="nav-item"
+              to="philosophy"
               spy={true}
               smooth={true}
               offset={-50}
               duration={500}
               onClick={this.closeNavbar}
             >
-              Featured
+              Philosophy
             </Link>
-          </li>
-          <li className="nav-item">
             <Link
               activeClass="active"
+              className="nav-item"
               to="courses"
               spy={true}
               smooth={true}
@@ -58,21 +55,31 @@ class Navbar extends React.Component {
             >
               Courses
             </Link>
-          </li>
 
-          <li className="nav-item">
             <Link
               activeClass="active"
-              to="recent"
+              className="nav-item"
+              to="recentVideos"
               spy={true}
               smooth={true}
               offset={-50}
               duration={500}
               onClick={this.closeNavbar}
             >
-              Recent
+              Recent Videos
             </Link>
-          </li>
+            <Link
+              activeClass="active"
+              className="nav-item"
+              to="newsletter"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+              onClick={this.closeNavbar}
+            >
+              Newsletter
+            </Link>
 
           {/* <li className="nav-item">
             <a href="#contact">Contact</a>
