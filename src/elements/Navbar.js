@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { white, lightGrey, backgroundDark } from "../utilities/Colors";
+import { white, backgroundDark } from "../utilities/Colors";
 import {shadow} from "../utilities/Mixins";
-export const StyledNavbar = styled.nav`
+export const StyledNavbar = styled.header`
     background-color: ${backgroundDark};
     color: ${white};
     position: sticky;
@@ -9,7 +9,7 @@ export const StyledNavbar = styled.nav`
     width: 100%;
     height: 80px;
     z-index: 1000;
-    ${shadow}
+    /* ${shadow} */
 
     .nav-content {
         max-width: 1400px;
@@ -19,6 +19,10 @@ export const StyledNavbar = styled.nav`
         justify-content: space-between;
         align-items: center;
         height: 100%;
+
+        #navBrand > img{
+            height: 60px;
+        }
 
         .nav-item {
             margin-left: 2rem;

@@ -1,10 +1,12 @@
 import styled from "styled-components";
+
 import {
   primary,
   primaryLight,
   primaryDark,
   white,
   secondary,
+  secondaryLight,
   secondaryDark
 } from "../utilities/Colors";
 import { hover, shadow } from "../utilities/Mixins";
@@ -12,19 +14,21 @@ import { hover, shadow } from "../utilities/Mixins";
 
 const fontSizesMap = {
   sm: "12px",
-  md: "16px",
+  md: "18px",
   lg: "20px"
 };
 
 export const Button = styled.button`
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
   border-radius: 5px;
   background-color: ${props =>
     props.type === "primary" ? primary : secondary};
   color: ${white} !important;
-  font-size: 1.4rem;
   transition: background-color 250ms;
-  font-size: ${props => fontSizesMap[props.size] || "16px"};
+  border: none;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: ${props => fontSizesMap[props.size] || "1.8rem"};
     ${shadow}
   &:hover {
     cursor: pointer;
@@ -48,6 +52,7 @@ export const LinkButton = styled.a`
   font-size: 16px;
   text-decoration: none;
   display: inline-block;
+  border: none;
   ${shadow}
   &:hover {
     cursor: pointer;

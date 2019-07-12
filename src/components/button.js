@@ -6,7 +6,7 @@ export default props => {
       className={"btn " + (props.classString || "")}
       onClick={props.onBtnClick}
     >
-      {props.btnText}
+      {props.children}
     </button>
   );
 };

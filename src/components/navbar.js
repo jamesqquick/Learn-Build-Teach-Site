@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/lbt-icon.svg";
+import logo from "../images/logo360-white.svg";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {StyledNavbar } from "../elements/Navbar";
@@ -15,7 +15,7 @@ class Navbar extends React.Component {
 
   render = () => (
     <StyledNavbar className={"nav" + (this.state.navOpen ? " open" : "")} id="navbar">
-      <div className="nav-content">
+      <nav className="nav-content">
             <a href="#" id="navBrand">
               <img
                 src={logo}
@@ -30,6 +30,9 @@ class Navbar extends React.Component {
               onClick={this.toggleNavbar}
             />
           </div>
+          <nav>
+
+          </nav>
         <ul className={"nav-items" + (this.state.navOpen ? "" : " hidden-sm")}>
             <Link
               activeClass="active"
@@ -85,7 +88,7 @@ class Navbar extends React.Component {
             <a href="#contact">Contact</a>
           </li> */}
         </ul>
-      </div>
+      </nav>
     </StyledNavbar>
   );
 

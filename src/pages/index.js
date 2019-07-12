@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/header";
+import Hero from "../components/hero";
 import Layout from "../components/layout";
 import { Section } from "../components/section";
 import CourseList from "../components/courseList";
@@ -7,9 +7,7 @@ import YouTubeGallery from "../components/YouTubeGallery";
 import { StyledNewsletter } from "../elements/Newsletter"
 const IndexPage = () => (
   <Layout>
-    <Section>
-      <Header />
-    </Section>
+    <Hero />
     <div id="courses">
       <Section title="Start Learning!">
         <CourseList />

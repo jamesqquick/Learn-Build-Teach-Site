@@ -1,7 +1,7 @@
 import { createGlobalStyle} from "styled-components";
 import { black } from "../utilities/Colors";
+
 const GlobalStyle = createGlobalStyle`
-    
     * {
         box-sizing: border-box;
     }
@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     h4{
         color: ${black};
         font-family: oswald;
+        letter-spacing: 2px;
     }
 
     p {

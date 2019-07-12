@@ -26,6 +26,7 @@
     "gatsby-transformer-sharp": "^2.1.10",
     "netlify-lambda": "^1.1.1",
     "node-sass": "^4.11.0",
+    "polished": "^3.4.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
