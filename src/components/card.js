@@ -8,10 +8,10 @@ export default function card(props) {
     <StyledCard>
       {tag && <CardTag>{tag}</CardTag>}
       {overlayUrl && <a className="card-overlay" href={overlayUrl} />}
-      <CardContent>{props.children[0] || props.children}</CardContent>
       <CardImage>
         <img src={withPrefix(`/${imgName}`)} alt={imageAlt} />
       </CardImage>
+      <CardContent>{props.children[0] || props.children}</CardContent>
     </StyledCard>
   );
 }

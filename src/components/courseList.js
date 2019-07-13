@@ -1,7 +1,6 @@
-import React from "react";
-import Card from "./card";
+import React, { Fragment } from "react";
 import { StaticQuery, graphql } from "gatsby";
-
+import CourseCard from "./CourseCard";
 const CourseList = props => {
   return (
     <StaticQuery
@@ -25,47 +24,36 @@ const CourseList = props => {
                   hours
                   videos
                   tag
+                  featured
                 }
               }
             }
           }
         }
       `}
-      render={data => (
-        <div className="card-list">
-          {data.allMarkdownRemark.edges.map(course => {
-            const {
-              title,
-              description,
-              imageName,
-              imageAlt,
-              url,
-              hours,
-              videos,
-              tag,
-              id
-            } = course.node.frontmatter;
-            return (
-              <Card
-                imgName={imageName}
-                imageAlt={imageAlt}
-                overlayUrl={url}
-                tag={tag}
-                key={id}
-              >
-                <div>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                  <p>
-                    <strong>{videos}</strong> videos <strong>{hours}</strong>{" "}
-                    hours
-                  </p>
-                </div>
-              </Card>
-            );
-          })}
+      render={data => {
+        const courses = data.allMarkdownRemark.edges.map( course => course.node.frontmatter);
+        const featuredCourses = courses.filter( course => course.featured == "true");
+        const notFeaturedCourses = courses.filter( course => course.featured != "true");
+        const featuredCourse = featuredCourses[0];
+        return (
+        <div id="courses">
+          <div className="container">
+            { featuredCourse && (
+              <Fragment>
+                <h2>Featured</h2>
+                <CourseCard course={featuredCourse} featured={true}></CourseCard>
+              </Fragment>
+            )}
+              <div className="course-list">
+                {
+                  notFeaturedCourses.map(course => (
+                    <CourseCard key={course.title} course={course} featured={false}></CourseCard>
+                  ))}
+              </div>
+            </div>
         </div>
-      )}
+      )}}
     />
   );
 };

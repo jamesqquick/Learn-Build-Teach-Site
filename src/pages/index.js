@@ -12,11 +12,9 @@ const IndexPage = () => (
     <Section>
       <Philosophy/>
     </Section>
-    <div id="courses">
       <Section title="Start Learning!">
         <CourseList />
       </Section>
-    </div>
     <div id="recent">
       <Section title="Recent Videos" classString="section-dark">
         <YouTubeGallery />

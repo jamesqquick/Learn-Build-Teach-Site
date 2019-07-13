@@ -10,6 +10,7 @@ imageAlt: "Learn VS Code Cover"
 videos: "30"
 hours: "4"
 tag: "PREMIUM"
+featured: "true"
 ---
 
 Learn everything you need to know about the most popular editor for Web Development.

@@ -36,7 +36,7 @@ export const StyledNavbar = styled.header`
                 font-weight: 300;
                 transition: 200ms;
                 &:hover {
-                    transform: scale(1.05);
+                    transform: scale(1.02);
                     border-bottom: 2px solid ${primary};
                     padding-bottom: 1px;
                 }

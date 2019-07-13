@@ -6,7 +6,6 @@ export const StyledSection = styled.section`
 
 padding: 12rem 5rem;
   background-color: #fafafa;
-
 .section-dark {
   background-color: #eaeaea;
 }

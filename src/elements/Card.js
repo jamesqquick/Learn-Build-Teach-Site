@@ -5,12 +5,13 @@ import { hover, shadow } from "../utilities/Mixins";
 export const StyledCard = styled.div`
   background: white;
   border-radius: 5px;
-  display: flex;
-  position: relative;
   transition: 200ms;
-  max-width: 900px;
-  margin: 0 auto;
+  width: 30%;
+  min-width: 250px;
   margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction:column;
   position: relative;
   ${shadow}
   &:hover {
@@ -18,22 +19,16 @@ export const StyledCard = styled.div`
   }
 
   @media only screen and (max-width: 1000px) {
-    flex-direction: column;
-    position: relative;
-
-    & > * {
-      width: 100%;
-    }
+    width:100%;
   }
 `;
 
 export const StyledImageCard = styled.div`
-    width: 32%;
-    margin-bottom: 2rem;
     text-align: center;
+    height:200px;
 
     & > img {
-      height: auto;
+      height: 100%;
       width: 100%;
       max-width: 400px;
        &:hover {
@@ -47,10 +42,7 @@ export const StyledImageCard = styled.div`
 export const CardContent = styled.div`
   padding: 2rem;
   width: 60%;
-
-  @media only screen and (max-width: 1000px) {
-    width: 100%;
-  }
+  width: 100%;
 `;
 
 export const CardTag = styled.div`
@@ -64,15 +56,12 @@ export const CardTag = styled.div`
 `;
 
 export const CardImage = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
-  padding: 2rem;
-
+  width: 100%;
+  height: 200px;
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
 
   @media only screen and (max-width: 1000px) {
