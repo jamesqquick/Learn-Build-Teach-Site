@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import { StaticQuery, graphql } from "gatsby";
-import CourseCard from "./CourseCard";
+import CourseCard, {CARD_TYPES} from "./CourseCard";
+import { CardList } from "../elements/Card";
+import { StyledCourseList} from "../elements/CourseList";
 const CourseList = props => {
   return (
     <StaticQuery
@@ -36,24 +38,27 @@ const CourseList = props => {
         const featuredCourses = courses.filter( course => course.featured == "true");
         const notFeaturedCourses = courses.filter( course => course.featured != "true");
         const featuredCourse = featuredCourses[0];
-        return (
-        <div id="courses">
-          <div className="container">
-            { featuredCourse && (
-              <Fragment>
-                <h2>Featured</h2>
-                <CourseCard course={featuredCourse} featured={true}></CourseCard>
-              </Fragment>
-            )}
-              <div className="course-list">
-                {
-                  notFeaturedCourses.map(course => (
-                    <CourseCard key={course.title} course={course} featured={false}></CourseCard>
-                  ))}
-              </div>
-            </div>
-        </div>
-      )}}
+        return <div id="courses">
+            <StyledCourseList>
+              {featuredCourse && <Fragment>
+                  <CourseCard course={featuredCourse} type={CARD_TYPES.horizontal} />
+                </Fragment>}
+              <CardList>
+                {notFeaturedCourses.map(course => (
+                  <CourseCard
+                    key={course.title}
+                    course={course}
+                    featured={false}
+                  />
+                ))}
+              </CardList>
+              <h4 className="callout">
+                Want more FREE content? Check us out on <a href="https://www.youtube.com/c/jamesqquick">
+                  YouTube
+                </a>!
+              </h4>
+            </StyledCourseList>
+          </div>;}}
     />
   );
 };

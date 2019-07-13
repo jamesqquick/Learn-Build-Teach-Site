@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 import {
   primary,
-  primaryLight,
   primaryDark,
   white,
   secondary,
-  secondaryLight,
   secondaryDark
 } from "../utilities/Colors";
 import { hover, shadow } from "../utilities/Mixins";

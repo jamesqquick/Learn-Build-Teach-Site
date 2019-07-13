@@ -12,7 +12,7 @@ const IndexPage = () => (
     <Section>
       <Philosophy/>
     </Section>
-      <Section title="Start Learning!">
+      <Section title="Courses" >
         <CourseList />
       </Section>
     <div id="recent">

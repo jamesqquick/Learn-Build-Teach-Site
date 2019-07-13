@@ -62,6 +62,7 @@ const GlobalStyle = createGlobalStyle`
         /* border-bottom: 2px solid ${primary}; */
         color: ${primary};
         font-weight:500;
+        font-size: inherit;
     }
 
     a:visited {

@@ -4,14 +4,12 @@ import { StyledCard, CardTag, CardImage, CardContent } from "../elements/Card";
 
 export default function card(props) {
   const { overlayUrl, imgName, imageAlt, tag } = props;
-  return (
-    <StyledCard>
+  return <StyledCard type={props.type}>
       {tag && <CardTag>{tag}</CardTag>}
       {overlayUrl && <a className="card-overlay" href={overlayUrl} />}
-      <CardImage>
+      <CardImage type={props.type}>
         <img src={withPrefix(`/${imgName}`)} alt={imageAlt} />
       </CardImage>
       <CardContent>{props.children[0] || props.children}</CardContent>
-    </StyledCard>
-  );
+    </StyledCard>;
 }
