@@ -28,7 +28,7 @@ export default class Philosophy extends Component {
                 <br></br>
                 <br></br>
 
-                <p>Interested in content updates? <a href="https://peerreviews.dev/">Sign up here</a>.</p>
+                <p>Interested in content updates? <a href="#newsletter">Sign up here</a>.</p>
             </StyledPhilosophy>
         )
     }

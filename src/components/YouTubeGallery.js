@@ -44,7 +44,7 @@ export default class YouTubeGallery extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container" id="recent">
         {!!this.state.selectedVideo && (
           <FullscreenVideo
             onClose={this.closeVideo}

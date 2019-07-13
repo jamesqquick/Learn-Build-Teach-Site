@@ -16,22 +16,19 @@ export default class Newsletter extends React.Component {
   render() {
     const { email, subscribed, errorMsg, shake } = this.state;
     return (
-      <Fragment>
+      <div id="newsletter">
         {!subscribed ? (
           <StyledForm className="newsletter" onSubmit={this.onSubscribeClick}>
-            <h2 className="title">
-              Subscribe for the latest articles, videos, and courses!
-            </h2>
+            <div className="inline">
 
-            <div className="inline-form-input">
               <input
                 type="email"
                 name="email"
                 placeholder="Sign me up!"
                 onChange={this.onInputChange}
                 value={email}
-              />
-              <Button type="secondary" className={shake ? " shake" : ""}>
+                />
+              <Button type="primary" className={shake ? " shake" : ""}>
                 Subscribe
               </Button>
             </div>
@@ -40,7 +37,7 @@ export default class Newsletter extends React.Component {
         ) : (
           <h2 className="text-center">Thanks for subscribing!</h2>
         )}
-      </Fragment>
+      </div>
     );
   }
 

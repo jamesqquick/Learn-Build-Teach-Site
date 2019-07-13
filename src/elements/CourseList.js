@@ -9,5 +9,6 @@ export const StyledCourseList = styled.div`
 
     .callout {
         text-align: center;
+        font-weight: 300;
     }
 `;

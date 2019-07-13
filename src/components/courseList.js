@@ -53,9 +53,11 @@ const CourseList = props => {
                 ))}
               </CardList>
               <h4 className="callout">
-                Want more FREE content? Check us out on <a href="https://www.youtube.com/c/jamesqquick">
-                  YouTube
-                </a>!
+                Want more <strong>FREE</strong> content? Check us out on <strong>
+                  <a href="https://www.youtube.com/c/jamesqquick">
+                    YouTube
+                  </a>
+                </strong>!
               </h4>
             </StyledCourseList>
           </div>;}}

@@ -1,24 +1,29 @@
 import styled from "styled-components";
-import { secondary } from "../utilities/Colors";
+import { secondary, primary } from "../utilities/Colors";
 import { hover, shadow } from "../utilities/Mixins";
 
 
 export const StyledCard = styled.div`
-         background: white;
-         border-radius: 5px;
-         transition: 200ms;
-         width: ${props => (props.type === "horizontal" ? "100%" : "30%")};
-         align-items: ${props => (props.type === "horizontal" ? "center" : "")};
-         min-width: 350px;
-         margin-bottom: 4rem;
-         position: relative;
-         display: flex;
-         flex-direction: ${props => (props.type === "horizontal" ? "row" : "column")};
-         position: relative;
-         ${shadow}
-         &:hover {
-           ${hover}
-           }
+  background: white;
+  border-radius: 5px;
+  transition: 200ms;
+  width: ${props => (props.type === "horizontal" ? "100%" : "30%")};
+  align-items: ${props => (props.type === "horizontal" ? "center" : "")};
+  min-width: 350px;
+  margin-bottom: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: ${props => (props.type === "horizontal" ? "row" : "column")};
+  position: relative;
+  ${shadow}
+  
+  &:hover {
+    ${hover}
+
+    h3 {
+      color: ${primary};
+    }
+  }
 
          @media only screen and (max-width: 1200px) {width: ${props => (props.type === "horizontal" ? "100%" : "45%")};}
 
