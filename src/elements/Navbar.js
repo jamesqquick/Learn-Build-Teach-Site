@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { white, backgroundDark } from "../utilities/Colors";
+import { white, backgroundDark, primary } from "../utilities/Colors";
 import {shadow} from "../utilities/Mixins";
 export const StyledNavbar = styled.header`
     background-color: ${backgroundDark};
@@ -24,9 +24,29 @@ export const StyledNavbar = styled.header`
             height: 60px;
         }
 
-        .nav-item {
-            margin-left: 2rem;
-            color: $black;
+        .nav-items {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            
+            .nav-item {
+                margin-left: 2rem;
+                color: ${white};
+                font-size: 1.8rem;
+                font-weight: 300;
+                transition: 200ms;
+                &:hover {
+                    transform: scale(1.05);
+                    border-bottom: 2px solid ${primary};
+                    padding-bottom: 1px;
+                }
+
+                &.active {
+                   transform: scale(1.05);
+                    border-bottom: 2px solid ${primary};
+                    padding-bottom: 1px; 
+                }
+            }
         }
     }
 

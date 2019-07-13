@@ -1,5 +1,5 @@
 import { createGlobalStyle} from "styled-components";
-import { black } from "../utilities/Colors";
+import { black, primary } from "../utilities/Colors";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -26,13 +26,11 @@ const GlobalStyle = createGlobalStyle`
 
     p {
         color: ${black};
-    }
-
-    p,
-    a {
-        font-size: 1.6rem;
         font-weight: 300;
-        line-height: 1.5;
+        font-size:1.6rem;
+    }
+    a {
+      font-size: 1.6rem;
     }
 
     a:hover {
@@ -41,20 +39,17 @@ const GlobalStyle = createGlobalStyle`
 
     h1 {
         font-size: 5.4rem;
-        font-weight: 700;
         margin: 0;
     }
 
     h2 {
         font-size: 4.2rem;
-        font-weight: 700;
         margin: 0;
     }
 
     h3 {
         font-size: 3.6rem;
         margin-bottom: 2rem;
-        font-weight: 300;
     }
 
     h4 {
@@ -64,17 +59,18 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
-        color: $black;
+        /* border-bottom: 2px solid ${primary}; */
+        color: ${primary};
+        font-weight:500;
     }
 
     a:visited {
-        color: $black;
+        color: ${primary};
     }
 
 
 .container {
   max-width: 1000px;
-  //padding: 5rem;
   margin: 0 auto;
 }
 

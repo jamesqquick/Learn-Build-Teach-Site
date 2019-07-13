@@ -6,8 +6,7 @@ export const StyledHero= styled.div`
     align-items: center;
     justify-content: center;
     background: ${backgroundDark};
-    height: calc(100vh - 80px);
-
+    padding: 20rem 5rem;
     .hero-title {
         color: ${white};
         text-align:center;
@@ -19,6 +18,7 @@ export const StyledHero= styled.div`
         font-family: Roboto;
         margin-top: 1rem;
         text-align:center;
+        margin-bottom:3rem;
     }
 
     .hero-image {
