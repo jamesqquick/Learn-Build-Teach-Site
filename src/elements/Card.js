@@ -4,11 +4,10 @@ import { hover, shadow } from "../utilities/Mixins";
 
 export const StyledCard = styled.div`
   background: white;
-  border: 1px solid darken($color: $off-white, $amount: 20);
   border-radius: 5px;
   display: flex;
   position: relative;
-  transition: 100ms;
+  transition: 200ms;
   max-width: 900px;
   margin: 0 auto;
   margin-bottom: 2rem;

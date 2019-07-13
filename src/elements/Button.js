@@ -29,12 +29,15 @@ export const Button = styled.button`
   font-family: Roboto;
   font-weight: 700;
   font-size: ${props => fontSizesMap[props.size] || "1.8rem"};
-    ${shadow}
+  ${shadow}
+
   &:hover {
     cursor: pointer;
     background-color: ${props =>
       props.type === "primary" ? primaryDark : secondaryDark};
       ${hover};
+      transform: translateY(-2px);
+
   }
 
   &:disabled {
@@ -47,17 +50,19 @@ export const LinkButton = styled.a`
   border: none;
   background-color: ${primary};
   color: white !important;
-  padding: 10px 20px;
+  padding: 1.5rem 3rem;
   border-radius: 5px;
   font-size: 16px;
   text-decoration: none;
   display: inline-block;
   border: none;
+  font-size: ${props => fontSizesMap[props.size] || "1.8rem"};
+
   ${shadow}
   &:hover {
     cursor: pointer;
-    transform: scale(1.02);
     background-color: ${primaryDark};
     ${hover}
+    transform: translateY(-2px);
   }
 `;
