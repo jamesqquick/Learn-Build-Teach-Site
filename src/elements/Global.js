@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     html {
         font-size: 10px;
         font-family: roboto;
+        scroll-behavior: smooth;
     }
 
     body {
