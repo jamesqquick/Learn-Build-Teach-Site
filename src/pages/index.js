@@ -1,10 +1,9 @@
 import React from "react";
-import Hero from "../components/hero";
+import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import { Section, SECTION_TYPES } from "../components/Section";
-import CourseList from "../components/courseList";
+import CourseList from "../components/CourseList";
 import YouTubeGallery from "../components/YouTubeGallery";
-import { StyledNewsletter } from "../elements/Newsletter";
 import Philosophy from "../components/Philosophy";
 import Newsletter from "../components/Newsletter";
 

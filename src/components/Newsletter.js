@@ -1,8 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Button } from "../elements/Button";
 import * as EmailValidator from "email-validator";
 import { StyledForm } from "../elements/Forms";
-import { StlyedNewsletter} from "../elements/Newsletter";
 export default class Newsletter extends React.Component {
   constructor(props) {
     super(props);

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { white, lightGrey, primary} from "../utilities/Colors";
-import {SECTION_TYPES} from "../components/Section";
 
 const TYPES_TO_COLORS = {
   "DARK": lightGrey,

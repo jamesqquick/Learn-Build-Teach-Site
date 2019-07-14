@@ -35,8 +35,8 @@ const CourseList = props => {
       `}
       render={data => {
         const courses = data.allMarkdownRemark.edges.map( course => course.node.frontmatter);
-        const featuredCourses = courses.filter( course => course.featured == "true");
-        const notFeaturedCourses = courses.filter( course => course.featured != "true");
+        const featuredCourses = courses.filter( course => course.featured === "true");
+        const notFeaturedCourses = courses.filter( course => course.featured !== "true");
         const featuredCourse = featuredCourses[0];
         return <div id="courses">
             <StyledCourseList>

@@ -22,7 +22,7 @@ export default class Philosophy extends Component {
                     </div>
                         
                         
-                    <img id="profilePic" alt="James Q Quick circle image" src={meCirlce}/>
+                    <img id="profilePic" alt="James Q Quick circle" src={meCirlce}/>
                 </div>
                 <p>Hi! I’m <strong>James Q Quick</strong>, the founder of <strong>Learn Build Teach</strong>. I am a self-taught Web Developer with a desire to learn and a passion for teaching. I want to share that passion with you on this platform!</p>
                 <br></br>
