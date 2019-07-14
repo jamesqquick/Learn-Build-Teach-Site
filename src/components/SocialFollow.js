@@ -7,12 +7,12 @@ import {
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 import {StyledSocialFollow, SocialFollowIcon} from "../elements/SocialFollow";
-import {StyledFlex} from "../elements/Flexbox";
+import {StyledCenterFlex} from "../elements/Flexbox";
 export default function SocialFollow() {
   return (
     <StyledSocialFollow >
-      <h3>@LearnBuildTeach</h3>
-      <StyledFlex>
+      <p>@2019 Learn Build Teach, LLC</p>
+      <StyledCenterFlex>
         <SocialFollowIcon
           href="https://www.youtube.com/c/jamesqquick"
           type="youtube"
@@ -38,7 +38,7 @@ export default function SocialFollow() {
         >
           <FontAwesomeIcon icon={faInstagram} size="2x" />
         </SocialFollowIcon>
-      </StyledFlex>
+      </StyledCenterFlex>
     </StyledSocialFollow>
   );
 }

@@ -1,13 +1,11 @@
 import React from "react";
 import SocialFollow from "./SocialFollow";
 import { Footer } from "../elements/Footer";
+import logo from "../images/logo360-white.svg";
 
 export default function footer() {
-  return (
-    <Footer>
-      <div className="footer-content">
+  return <Footer>
+          <img src={logo} alt="Learn Build Teach Logo."/>
         <SocialFollow />
-      </div>
-    </Footer>
-  );
+    </Footer>;
 }
