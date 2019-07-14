@@ -44,13 +44,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `oswald\:300,500,700`,
-          `roboto\:300,500,700`
-        ],
-        display: 'swap'
+        fonts: [`oswald\:300,500,700`, `roboto\:300,500,700`],
+        display: "swap"
       }
     },
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-styled-components`
+    }
   ]
 };
