@@ -24,6 +24,8 @@ export const StyledNavbar = styled.header`
             height: 60px;
         }
 
+  
+
         .nav-items {
             height: 80px;
             display: flex;
@@ -63,6 +65,7 @@ export const StyledNavbar = styled.header`
         padding: 1rem 0;
         opacity: 0.99;
 
+
         &.open {
             position: fixed;
             top: 0;
@@ -81,6 +84,9 @@ export const StyledNavbar = styled.header`
                     position: absolute;
                     top: 2rem;
                     right: 2rem;
+                }
+                nav {
+                    margin: 0 auto;
                 }
                 .nav-items {
                     display: flex;

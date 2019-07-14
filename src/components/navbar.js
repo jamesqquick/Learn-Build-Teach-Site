@@ -15,7 +15,7 @@ class Navbar extends React.Component {
 
   render = () => (
     <StyledNavbar className={"nav" + (this.state.navOpen ? " open" : "")} id="navbar">
-      <nav className="nav-content">
+      <div className="nav-content">
             <a href="#" id="navBrand">
               <img
                 src={logo}
@@ -30,65 +30,65 @@ class Navbar extends React.Component {
               onClick={this.toggleNavbar}
             />
           </div>
-          <nav>
+          <nav className={this.state.navOpen ? "" : " hidden-sm"}>
 
+            <ul className="nav-items">
+              <Link
+                activeClass="active"
+                className="nav-item"
+                to="philosophy"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+                onClick={this.closeNavbar}
+                >
+                Philosophy
+              </Link>
+              <Link
+                activeClass="active"
+                className="nav-item"
+                to="courses"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+                onClick={this.closeNavbar}
+                >
+                Courses
+              </Link>
+
+              <Link
+                activeClass="active"
+                className="nav-item"
+                to="recentVideos"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+                onClick={this.closeNavbar}
+                >
+                Recent Videos
+              </Link>
+              <Link
+                activeClass="active"
+                className="nav-item"
+                to="newsletter"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+                onClick={this.closeNavbar}
+                >
+                Newsletter
+              </Link>
+
+            {/* <li className="nav-item">
+              <a href="#contact">Contact</a>
+            </li> */}
+          </ul>
           </nav>
-        <ul className={"nav-items" + (this.state.navOpen ? "" : " hidden-sm")}>
-            <Link
-              activeClass="active"
-              className="nav-item"
-              to="philosophy"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-              onClick={this.closeNavbar}
-            >
-              Philosophy
-            </Link>
-            <Link
-              activeClass="active"
-              className="nav-item"
-              to="courses"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-              onClick={this.closeNavbar}
-            >
-              Courses
-            </Link>
-
-            <Link
-              activeClass="active"
-              className="nav-item"
-              to="recentVideos"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-              onClick={this.closeNavbar}
-            >
-              Recent Videos
-            </Link>
-            <Link
-              activeClass="active"
-              className="nav-item"
-              to="newsletter"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-              onClick={this.closeNavbar}
-            >
-              Newsletter
-            </Link>
-
-          {/* <li className="nav-item">
-            <a href="#contact">Contact</a>
-          </li> */}
-        </ul>
-      </nav>
+        </div>
     </StyledNavbar>
   );
 
