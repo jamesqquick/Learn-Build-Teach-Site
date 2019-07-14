@@ -100,6 +100,10 @@ span.highlight {
 }
 
 @media only screen and (max-width: 768px) {
+
+  html {
+        font-size: 8px;
+    }
   .hidden-sm {
     display: none;
   }

@@ -30,12 +30,11 @@ export const StyledSection = styled.section`
   }
 
   @media only screen and (max-width: 768px) {
-    .section {
       padding: 8rem 3rem;
-    }
     .section-full {
       padding: 0;
     }
+   
   }
 
 `;

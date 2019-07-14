@@ -9,7 +9,7 @@ export const StyledCard = styled.div`
   transition: 200ms;
   width: ${props => (props.type === "horizontal" ? "100%" : "30%")};
   align-items: ${props => (props.type === "horizontal" ? "center" : "")};
-  min-width: 350px;
+  min-width: 300px;
   margin-bottom: 4rem;
   position: relative;
   display: flex;
