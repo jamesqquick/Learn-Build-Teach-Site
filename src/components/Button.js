@@ -1,12 +1,12 @@
 import React from "react";
+import { Button } from "../elements/Button";
 
 export default props => {
   return (
-    <button
-      className={"btn " + (props.classString || "")}
+    <Button
       onClick={props.onBtnClick}
     >
       {props.children}
-    </button>
+    </Button>
   );
 };
