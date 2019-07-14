@@ -39,7 +39,7 @@ class Navbar extends React.Component {
                 to="philosophy"
                 spy={true}
                 smooth={true}
-                offset={-50}
+                offset={-200}
                 duration={500}
                 onClick={this.closeNavbar}
                 >
@@ -51,7 +51,7 @@ class Navbar extends React.Component {
                 to="courses"
                 spy={true}
                 smooth={true}
-                offset={-50}
+                offset={-400}
                 duration={500}
                 onClick={this.closeNavbar}
                 >
@@ -61,10 +61,10 @@ class Navbar extends React.Component {
               <Link
                 activeClass="active"
                 className="nav-item"
-                to="recentVideos"
+                to="recent"
                 spy={true}
                 smooth={true}
-                offset={-50}
+                offset={-400}
                 duration={500}
                 onClick={this.closeNavbar}
                 >
@@ -76,7 +76,7 @@ class Navbar extends React.Component {
                 to="newsletter"
                 spy={true}
                 smooth={true}
-                offset={-50}
+                offset={-500}
                 duration={500}
                 onClick={this.closeNavbar}
                 >
