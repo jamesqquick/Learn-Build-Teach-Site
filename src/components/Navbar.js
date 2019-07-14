@@ -14,81 +14,83 @@ class Navbar extends React.Component {
   }
 
   render = () => (
-    <StyledNavbar className={"nav" + (this.state.navOpen ? " open" : "")} id="navbar">
+    <StyledNavbar
+      className={"nav" + (this.state.navOpen ? " open" : "")}
+      id="navbar"
+    >
       <div className="nav-content">
-            <a href="#" id="navBrand">
-              <img
-                src={logo}
-                alt="Learn Build Teach Logo."
-                onClick={this.scrollToTop}
-              />
-            </a>
-          <div id="hamburgerBtn">
-            <FontAwesomeIcon
-              icon={this.state.navOpen ? faTimes : faBars}
-              size="3x"
-              onClick={this.toggleNavbar}
-            />
-          </div>
-          <nav className={this.state.navOpen ? "" : " hidden-sm"}>
+        {/* // eslint-disable-next-line */}
+          <img
+          id="navBrand"
+            src={logo}
+            alt="Learn Build Teach Logo."
+            onClick={this.scrollToTop}
+          />
+        <div id="hamburgerBtn">
+          <FontAwesomeIcon
+            icon={this.state.navOpen ? faTimes : faBars}
+            size="3x"
+            onClick={this.toggleNavbar}
+          />
+        </div>
+        <nav className={this.state.navOpen ? "" : " hidden-sm"}>
+          <ul className="nav-items">
+            <Link
+              activeClass="active"
+              className="nav-item"
+              to="philosophy"
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={500}
+              onClick={this.closeNavbar}
+            >
+              Philosophy
+            </Link>
+            <Link
+              activeClass="active"
+              className="nav-item"
+              to="courses"
+              spy={true}
+              smooth={true}
+              offset={-400}
+              duration={500}
+              onClick={this.closeNavbar}
+            >
+              Courses
+            </Link>
 
-            <ul className="nav-items">
-              <Link
-                activeClass="active"
-                className="nav-item"
-                to="philosophy"
-                spy={true}
-                smooth={true}
-                offset={-200}
-                duration={500}
-                onClick={this.closeNavbar}
-                >
-                Philosophy
-              </Link>
-              <Link
-                activeClass="active"
-                className="nav-item"
-                to="courses"
-                spy={true}
-                smooth={true}
-                offset={-400}
-                duration={500}
-                onClick={this.closeNavbar}
-                >
-                Courses
-              </Link>
-
-              <Link
-                activeClass="active"
-                className="nav-item"
-                to="recent"
-                spy={true}
-                smooth={true}
-                offset={-400}
-                duration={500}
-                onClick={this.closeNavbar}
-                >
-                Recent Videos
-              </Link>
-              <Link
-                activeClass="active"
-                className="nav-item"
-                to="newsletter"
-                spy={true}
-                smooth={true}
-                offset={-500}
-                duration={500}
-                onClick={this.closeNavbar}
-                >
-                Newsletter
-              </Link>
+            <Link
+              activeClass="active"
+              className="nav-item"
+              to="recent"
+              spy={true}
+              smooth={true}
+              offset={-400}
+              duration={500}
+              onClick={this.closeNavbar}
+            >
+              Recent Videos
+            </Link>
+            <Link
+              activeClass="active"
+              className="nav-item"
+              to="newsletter"
+              spy={true}
+              smooth={true}
+              offset={-500}
+              duration={500}
+              onClick={this.closeNavbar}
+            >
+              Newsletter
+            </Link>
 
             {/* <li className="nav-item">
               <a href="#contact">Contact</a>
             </li> */}
           </ul>
-          </nav>
-        </div>
+        </nav>
+      </div>
     </StyledNavbar>
   );
 

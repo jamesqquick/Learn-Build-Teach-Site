@@ -20,8 +20,12 @@ export const StyledNavbar = styled.header`
         align-items: center;
         height: 100%;
 
-        #navBrand > img{
-            height: 36px;
+        #navBrand{
+            height: 32px;
+
+            &:hover{
+                cursor:pointer
+            }
         }
 
   
