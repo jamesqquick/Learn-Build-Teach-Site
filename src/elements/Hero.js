@@ -6,7 +6,7 @@ export const StyledHero = styled.div`
     align-items: center;
     justify-content: center;
     background: ${backgroundDark};
-    padding: 8rem 2rem;
+    padding: 16rem 2rem;
     .hero-title {
         color: ${white};
         text-align:center;
