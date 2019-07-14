@@ -14,7 +14,7 @@ export default class YouTubeGallery extends Component {
     this._isMounted = true;
 
     const url =
-      "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDKVI3I7T1exxi6mIL-UkNmWYE1f7E40TI&channelId=UC-T8W79DN6PBnzomelvqJYw&part=snippet,id&order=date&maxResults=15";
+      "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDKVI3I7T1exxi6mIL-UkNmWYE1f7E40TI&channelId=UC-T8W79DN6PBnzomelvqJYw&part=snippet,id&order=date&maxResults=8";
     fetch(url)
       .then(res => {
         return res.json();

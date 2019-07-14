@@ -40,8 +40,7 @@ export const CardList = styled.div`
 
 export const StyledImageCard = styled.div`
     text-align: center;
-    height:200px;
-
+    margin-bottom: 2rem;
     & > img {
       height: 100%;
       width: 100%;
