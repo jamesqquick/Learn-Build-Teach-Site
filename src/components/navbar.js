@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/logo360-white.svg";
+import logo from "../images/lbt-icon.svg";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {StyledNavbar } from "../elements/Navbar";

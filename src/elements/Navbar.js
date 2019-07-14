@@ -21,7 +21,7 @@ export const StyledNavbar = styled.header`
         height: 100%;
 
         #navBrand > img{
-            height: 60px;
+            height: 36px;
         }
 
   
