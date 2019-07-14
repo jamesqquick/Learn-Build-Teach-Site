@@ -46,7 +46,8 @@ export const Button = styled.button`
 
 export const LinkButton = styled.a`
   border: none;
-  background-color: ${primary};
+    background-color: ${props =>
+    props.type === "primary" ? primary : secondary};
   color: white !important;
   padding: 1.5rem 3rem;
   border-radius: 5px;
@@ -59,7 +60,8 @@ export const LinkButton = styled.a`
   ${shadow}
   &:hover {
     cursor: pointer;
-    background-color: ${primaryDark};
+    background-color: ${props =>
+    props.type === "primary" ? primaryDark : secondaryDark};
     ${hover}
     transform: translateY(-2px);
   }

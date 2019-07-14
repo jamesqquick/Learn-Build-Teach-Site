@@ -15,7 +15,7 @@ export default class Newsletter extends React.Component {
   render() {
     const { email, subscribed, errorMsg, shake } = this.state;
     return (
-      <div id="newsletter">
+      <div>
         {!subscribed ? (
           <StyledForm className="newsletter" onSubmit={this.onSubscribeClick}>
             <div className="inline">

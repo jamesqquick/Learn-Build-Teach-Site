@@ -38,29 +38,28 @@ const CourseList = props => {
         const featuredCourses = courses.filter( course => course.featured === "true");
         const notFeaturedCourses = courses.filter( course => course.featured !== "true");
         const featuredCourse = featuredCourses[0];
-        return <div id="courses">
-            <StyledCourseList>
-              {featuredCourse && <Fragment>
-                  <CourseCard course={featuredCourse} type={CARD_TYPES.horizontal} />
-                </Fragment>}
-              <CardList>
-                {notFeaturedCourses.map(course => (
-                  <CourseCard
-                    key={course.title}
-                    course={course}
-                    featured={false}
-                  />
-                ))}
-              </CardList>
-              <h4 className="callout">
-                Want more <strong>FREE</strong> content? Check us out on <strong>
-                  <a href="https://www.youtube.com/c/jamesqquick">
-                    YouTube
-                  </a>
-                </strong>!
-              </h4>
+        return <StyledCourseList>
+                {featuredCourse && <Fragment>
+                    <CourseCard course={featuredCourse} type={CARD_TYPES.horizontal} />
+                  </Fragment>}
+                <CardList>
+                  {notFeaturedCourses.map(course => (
+                    <CourseCard
+                      key={course.title}
+                      course={course}
+                      featured={false}
+                    />
+                  ))}
+                </CardList>
+                <h4 className="callout">
+                  Want more <strong>FREE</strong> content? Check us out on <strong>
+                    <a href="https://www.youtube.com/c/jamesqquick">
+                      YouTube
+                    </a>
+                  </strong>!
+                </h4>
             </StyledCourseList>
-          </div>;}}
+          ;}}
     />
   );
 };

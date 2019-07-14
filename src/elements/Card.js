@@ -7,9 +7,7 @@ export const StyledCard = styled.div`
   background: white;
   border-radius: 5px;
   transition: 200ms;
-  width: ${props => (props.type === "horizontal" ? "100%" : "30%")};
   align-items: ${props => (props.type === "horizontal" ? "center" : "")};
-  min-width: 300px;
   margin-bottom: 4rem;
   position: relative;
   display: flex;
@@ -25,17 +23,28 @@ export const StyledCard = styled.div`
     }
   }
 
-         @media only screen and (max-width: 1200px) {width: ${props => (props.type === "horizontal" ? "100%" : "45%")};}
+  
 
-         @media only screen and (max-width: 1000px) {width: 100%;
+         @media only screen and (max-width: 1200px) {
+            width: ${props => (props.type === "horizontal" ? "100%" : "45%")};
+
+            @supports (display:grid){
+              width:100%;
+              margin-bottom: ${props => (props.type === "horizontal" ? "4rem" : "0")};
+            }
+         }
+
+         @media only screen and (max-width: 1000px) {
+           width: 100%;
            flex-direction: column;
            align-items: unset;
            }`;
 
 export const CardList = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
 `;
 
 export const StyledImageCard = styled.div`

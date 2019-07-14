@@ -36,7 +36,7 @@ export const StyledNavbar = styled.header`
             align-items: center;
             
             .nav-item {
-                margin-left: 2rem;
+                margin-left: 4rem;
                 color: ${white};
                 font-size: 1.8rem;
                 font-weight: 300;

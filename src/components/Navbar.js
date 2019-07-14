@@ -41,7 +41,6 @@ class Navbar extends React.Component {
               to="philosophy"
               spy={true}
               smooth={true}
-              offset={-200}
               duration={500}
               onClick={this.closeNavbar}
             >
@@ -53,7 +52,6 @@ class Navbar extends React.Component {
               to="courses"
               spy={true}
               smooth={true}
-              offset={-400}
               duration={500}
               onClick={this.closeNavbar}
             >
@@ -66,9 +64,10 @@ class Navbar extends React.Component {
               to="recent"
               spy={true}
               smooth={true}
-              offset={-400}
               duration={500}
               onClick={this.closeNavbar}
+              offset={-500}
+
             >
               Recent Videos
             </Link>

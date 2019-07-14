@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../images/logo360-white.svg";
 import { StyledHero } from "../elements/Hero";
-import { Button } from "../elements/Button";
+import { ButtonLink, LinkButton } from "../elements/Button";
 export default () => {
   return (
     <StyledHero>
@@ -12,7 +12,7 @@ export default () => {
       />
       <h1 className="hero-title">DEVELOPMENT, DESIGN, AND TOOLS</h1>
       <h4 className="hero-subtitle">LET'S BUILD A COMMUNITY THAT LEARNS TOGETHER!</h4>
-      <Button >Start Learning!</Button>
+      <LinkButton href="#courses">Start Learning!</LinkButton>
     </StyledHero>
   );
 };

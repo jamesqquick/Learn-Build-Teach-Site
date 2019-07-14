@@ -44,7 +44,7 @@ export default class YouTubeGallery extends Component {
 
   render() {
     return (
-      <div className="container" id="recent">
+      <div className="container">
         {!!this.state.selectedVideo && (
           <FullscreenVideo
             onClose={this.closeVideo}
@@ -67,6 +67,7 @@ export default class YouTubeGallery extends Component {
         <div className="text-center">
           <LinkButton
             href="https://www.youtube.com/c/jamesqquick"
+            type="secondary"
           >
             View Channel!
           </LinkButton>{" "}

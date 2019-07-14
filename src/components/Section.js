@@ -6,7 +6,7 @@ export const SECTION_TYPES = {
   LIGHT: "LIGHT"
 }
 const Section = props => {
-  return <StyledSection className="section" type={props.type}>
+  return <StyledSection className="section" type={props.type} id={props.id}>
       {props.title && <h1 className="text-center section-title">
           {props.title}
         </h1>}

@@ -10,16 +10,16 @@ import Newsletter from "../components/Newsletter";
 const IndexPage = () => (
   <Layout>
     <Hero />
-    <Section>
+    <Section id="philosophy">
       <Philosophy />
     </Section>
-    <Section title="Courses" type={SECTION_TYPES.LIGHT}>
+    <Section title="Courses" type={SECTION_TYPES.LIGHT} id="courses">
       <CourseList />
     </Section>
-    <Section title="Recent Videos">
+    <Section title="Recent Videos" id="recent">
       <YouTubeGallery />
     </Section>
-    <Section title="Newsletter" type={SECTION_TYPES.LIGHT} subtitle="Sign up to get a free guide to Web Development in Visual Studio Code!">
+    <Section title="Newsletter" id="newsletter" type={SECTION_TYPES.LIGHT} subtitle="Sign up to get a free guide to Web Development in Visual Studio Code!">
       <Newsletter />
     </Section>
   </Layout>
