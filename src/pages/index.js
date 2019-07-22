@@ -1,12 +1,12 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import { Section, SECTION_TYPES } from "../components/Section";
-import CourseList from "../components/CourseList";
-import YouTubeGallery from "../components/YouTubeGallery";
-import Philosophy from "../components/Philosophy";
-import Newsletter from "../components/Newsletter";
-import Hero from "../components/Hero";
+import { Section, SECTION_TYPES } from "../components/Section"
+import CourseList from "../components/CourseList"
+import YouTubeGallery from "../components/YouTubeGallery"
+import Philosophy from "../components/Philosophy"
+import Newsletter from "../components/Newsletter"
+import Hero from "../components/Hero"
 
 const IndexPage = () => (
   <Layout>
@@ -21,7 +21,12 @@ const IndexPage = () => (
     <Section title="Recent Videos" id="recent">
       <YouTubeGallery />
     </Section>
-    <Section title="Newsletter" id="newsletter" type={SECTION_TYPES.LIGHT} subtitle="Sign up to get a free guide to Web Development in Visual Studio Code!">
+    <Section
+      title="Newsletter"
+      id="newsletter"
+      type={SECTION_TYPES.LIGHT}
+      subtitle="Sign up to get a free guide to Web Development in Visual Studio Code!"
+    >
       <Newsletter />
     </Section>
   </Layout>
