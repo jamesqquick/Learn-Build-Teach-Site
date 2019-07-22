@@ -1,14 +1,16 @@
-import React from "react";
-import Hero from "../components/Hero";
-import Layout from "../components/Layout";
+import React from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { Section, SECTION_TYPES } from "../components/Section";
 import CourseList from "../components/CourseList";
 import YouTubeGallery from "../components/YouTubeGallery";
 import Philosophy from "../components/Philosophy";
 import Newsletter from "../components/Newsletter";
+import Hero from "../components/Hero";
 
 const IndexPage = () => (
   <Layout>
+    <SEO title="Home" />
     <Hero />
     <Section id="philosophy">
       <Philosophy />
@@ -23,6 +25,6 @@ const IndexPage = () => (
       <Newsletter />
     </Section>
   </Layout>
-);
+)
 
-export default IndexPage;
+export default IndexPage

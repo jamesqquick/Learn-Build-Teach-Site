@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../images/logo360-white.svg";
 import { StyledHero } from "../elements/Hero";
-import { ButtonLink, LinkButton } from "../elements/Button";
+import { LinkButton } from "../elements/Button";
 export default () => {
   return (
     <StyledHero>
