@@ -1,5 +1,5 @@
-import { createGlobalStyle} from "styled-components";
-import { black, primary } from "../utilities/Colors";
+import { createGlobalStyle } from "styled-components"
+import { black, primary } from "../utilities/Colors"
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -102,9 +102,7 @@ span.highlight {
 
 @media only screen and (max-width: 768px) {
 
-  html {
-        font-size: 8px;
-    }
+  
   .hidden-sm {
     display: none;
   }
@@ -136,6 +134,6 @@ span.highlight {
   }
 }
 
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

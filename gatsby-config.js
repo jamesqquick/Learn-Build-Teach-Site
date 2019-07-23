@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
     title: `Learn Build Teach.`,
@@ -6,7 +8,7 @@ module.exports = {
   },
   proxy: {
     prefix: "/.netlify/functions",
-    url: "http://localhost:9000"
+    url: "http://localhost:9000",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,15 +16,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/md`,
-        name: "markdown-pages"
-      }
+        name: "markdown-pages",
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -32,7 +34,7 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `Learn Build Teach`,
         start_url: `/`,
-        icon: "src/images/lbt-icon.png" // This path is relative to the root of the site.
+        icon: "src/images/lbt-icon.png", // This path is relative to the root of the site.
       },
     },
     {
@@ -44,20 +46,20 @@ module.exports = {
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
-        respectDNT: true
-      }
+        respectDNT: true,
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`oswald\:300,500,700`, `roboto\:300,500,700`],
-        display: "swap"
-      }
+        display: "swap",
+      },
     },
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-styled-components`
-    }
+      resolve: `gatsby-plugin-styled-components`,
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

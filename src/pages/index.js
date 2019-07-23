@@ -13,7 +13,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Hero />
     <Section id="philosophy">
-      <Philosophy />
+      <Philosophy test="test" />
     </Section>
     <Section title="Courses" type={SECTION_TYPES.LIGHT} id="courses">
       <CourseList />

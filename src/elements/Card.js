@@ -1,7 +1,6 @@
-import styled from "styled-components";
-import { secondary, primary } from "../utilities/Colors";
-import { hover, shadow } from "../utilities/Mixins";
-
+import styled from "styled-components"
+import { secondary, primary } from "../utilities/Colors"
+import { hover, shadow } from "../utilities/Mixins"
 
 export const StyledCard = styled.div`
   background: white;
@@ -14,7 +13,7 @@ export const StyledCard = styled.div`
   flex-direction: ${props => (props.type === "horizontal" ? "row" : "column")};
   position: relative;
   ${shadow}
-  
+
   &:hover {
     ${hover}
 
@@ -25,56 +24,58 @@ export const StyledCard = styled.div`
 
   .card-overlay {
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
   }
 
-  
+  @media only screen and (max-width: 1200px) {
+    width: ${props => (props.type === "horizontal" ? "100%" : "45%")};
 
-         @media only screen and (max-width: 1200px) {
-            width: ${props => (props.type === "horizontal" ? "100%" : "45%")};
-
-            @supports (display:grid){
-              width:100%;
-              margin-bottom: ${props => (props.type === "horizontal" ? "4rem" : "0")};
-            }
-         }
-
-         @media only screen and (max-width: 1000px) {
-           width: 100%;
-           flex-direction: column;
-           align-items: unset;
-           }`;
-
-export const CardList = styled.div`
-
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-`;
-
-export const StyledImageCard = styled.div`
-    text-align: center;
-    margin-bottom: 2rem;
-    & > img {
-      height: 100%;
+    @supports (display: grid) {
       width: 100%;
-      max-width: 400px;
-       &:hover {
-        ${hover}
-      }
+      margin-bottom: ${props => (props.type === "horizontal" ? "4rem" : "0")};
     }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  @media only screen and (max-width: 786px) {
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
 `
 
+export const CardList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+`
 
+export const StyledImageCard = styled.div`
+  text-align: center;
+  margin-bottom: 2rem;
+  & > img {
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    &:hover {
+      ${hover}
+    }
+  }
+`
 
 export const CardContent = styled.div`
   padding: 2rem;
   width: 60%;
   width: 100%;
-`;
+`
 
 export const CardTag = styled.div`
   background-color: ${secondary};
@@ -84,26 +85,29 @@ export const CardTag = styled.div`
   color: white;
   font-size: 1.6rem;
   width: auto;
-`;
+`
 
 export const CardImage = styled.div`
-         width: 100%;
-         height: ${props => (props.type === "horizontal" ? "100%" : "200px")};
+  width: 100%;
+  height: ${props => (props.type === "horizontal" ? "100%" : "200px")};
 
-         img {
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-           display: block
-         }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-         @media only screen and (max-width: 1000px) {order: -1;
-           padding: 0;
-           width: 100%;
+  @media only screen and (max-width: 1000px) {
+    order: -1;
+    padding: 0;
+    width: 100%;
 
-           & > img {
-             width: 100%;
-           }}`;
+    & > img {
+      width: 100%;
+    }
+  }
+`
 
 export const CardOverlay = styled.div`
   position: absolute;
@@ -112,4 +116,4 @@ export const CardOverlay = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-`;
+`
