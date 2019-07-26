@@ -65,7 +65,7 @@ module.exports = {
       options: {
         channelId: ["UC-T8W79DN6PBnzomelvqJYw"],
         apiKey: "AIzaSyDKVI3I7T1exxi6mIL-UkNmWYE1f7E40TI",
-        maxVideos: 10,
+        maxVideos: 8,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

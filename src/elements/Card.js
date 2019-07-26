@@ -7,11 +7,11 @@ export const StyledCard = styled.div`
   border-radius: 5px;
   transition: 200ms;
   align-items: ${props => (props.type === "horizontal" ? "center" : "")};
-  margin-bottom: 4rem;
   position: relative;
   display: flex;
   flex-direction: ${props => (props.type === "horizontal" ? "row" : "column")};
   position: relative;
+  margin-bottom: ${props => (props.type === "horizontal" ? "4rem" : "0")};
   ${shadow}
 
   &:hover {
@@ -31,11 +31,8 @@ export const StyledCard = styled.div`
   }
 
   @media only screen and (max-width: 1200px) {
-    width: ${props => (props.type === "horizontal" ? "100%" : "45%")};
-
     @supports (display: grid) {
       width: 100%;
-      margin-bottom: ${props => (props.type === "horizontal" ? "4rem" : "0")};
     }
   }
 
@@ -56,15 +53,14 @@ export const CardList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 4rem;
+  margin-bottom: 4rem;
 `
 
 export const StyledImageCard = styled.div`
   text-align: center;
-  margin-bottom: 2rem;
   & > img {
     height: 100%;
     width: 100%;
-    max-width: 400px;
     &:hover {
       ${hover}
     }
@@ -91,21 +87,14 @@ export const CardImage = styled.div`
   width: 100%;
   height: ${props => (props.type === "horizontal" ? "100%" : "200px")};
 
-  img {
-    width: 100%;
+  .gatsby-image-wrapper {
     height: 100%;
-    object-fit: cover;
-    display: block;
   }
 
   @media only screen and (max-width: 1000px) {
     order: -1;
     padding: 0;
     width: 100%;
-
-    & > img {
-      width: 100%;
-    }
   }
 `
 
