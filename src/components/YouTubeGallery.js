@@ -24,8 +24,6 @@ export default class YouTubeGallery extends Component {
                   publishedAt
                   thumbnail {
                     url
-                    width
-                    height
                   }
                 }
               }
