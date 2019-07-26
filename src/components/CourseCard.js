@@ -1,41 +1,40 @@
-import React, { Component } from 'react'
-import Card from "./Card";
+import React, { Component } from "react"
+import Card from "./Card"
 
 export const CARD_TYPES = {
-    horizontal: "horizontal"
+  horizontal: "horizontal",
 }
 
 export default class CourseCard extends Component {
-    render() {
-        const {
-            title,
-            description,
-            imageName,
-            imageAlt,
-            url,
-            hours,
-            videos,
-            tag,
-            id,
-        } = this.props.course;
-        return (
-            <Card
-                imgName={imageName}
-                imageAlt={imageAlt}
-                overlayUrl={url}
-                tag={tag}
-                key={id}
-                type={this.props.type}
-            >
-                <div>
-                    <h3>{title}</h3>
-                    <p>{description}</p>
-                    <p>
-                        <strong>{videos}</strong> videos <strong>{hours}</strong>{" "}
-                        hours
-                  </p>
-                </div>
-            </Card>
-        );
-    }
+  render() {
+    const {
+      title,
+      description,
+      imageName,
+      imageAlt,
+      url,
+      hours,
+      videos,
+      tag,
+      id,
+    } = this.props.course
+    return (
+      <Card
+        imgName={imageName}
+        imageAlt={imageAlt}
+        overlayUrl={url}
+        tag={tag}
+        key={id}
+        type={this.props.type}
+      >
+        <div>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <p>
+            <strong>{videos}</strong> videos <strong>{hours}</strong> hours
+          </p>
+        </div>
+      </Card>
+    )
+  }
 }

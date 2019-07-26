@@ -1,6 +1,5 @@
 import React from "react"
 import { StyledPhilosophy } from "../elements/Philosophy"
-import meCirlce from "../images/me-circle.png"
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 
