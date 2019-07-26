@@ -10,7 +10,7 @@ export default class CourseCard extends Component {
     const {
       title,
       description,
-      imageName,
+      image,
       imageAlt,
       url,
       hours,
@@ -20,7 +20,7 @@ export default class CourseCard extends Component {
     } = this.props.course
     return (
       <Card
-        imgName={imageName}
+        image={image}
         imageAlt={imageAlt}
         overlayUrl={url}
         tag={tag}
