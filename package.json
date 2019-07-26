@@ -23,6 +23,7 @@
     "gatsby-plugin-sharp": "^2.2.8",
     "gatsby-plugin-styled-components": "^3.1.2",
     "gatsby-source-filesystem": "^2.1.5",
+    "gatsby-source-youtube-v2": "^1.0.1",
     "gatsby-transformer-remark": "^2.6.8",
     "gatsby-transformer-sharp": "^2.2.4",
     "netlify-lambda": "^1.5.0",

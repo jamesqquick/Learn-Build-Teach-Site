@@ -1,5 +1,5 @@
-import React from "react";
-import { StyledImageCard } from "../elements/Card";
+import React from "react"
+import { StyledImageCard } from "../elements/Card"
 export class YouTubeThumbnail extends React.Component {
   render = () => {
     return (
@@ -7,8 +7,8 @@ export class YouTubeThumbnail extends React.Component {
         className="youtube-thumbnail"
         onClick={() => this.props.showFullscreenVideo(this.props.video)}
       >
-        <img src={this.props.video.thumbnail} alt="" />
+        <img src={this.props.video.thumbnail.url} alt="" />
       </StyledImageCard>
-    );
-  };
+    )
+  }
 }

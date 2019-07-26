@@ -17,7 +17,6 @@ export default () => {
       }
     }
   `)
-  console.log(data)
   return (
     <StyledPhilosophy id="philosophy">
       <div className="philosophy-content">

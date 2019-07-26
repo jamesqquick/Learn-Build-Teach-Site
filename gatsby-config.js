@@ -60,6 +60,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
     },
+    {
+      resolve: `gatsby-source-youtube-v2`,
+      options: {
+        channelId: ["UC-T8W79DN6PBnzomelvqJYw"],
+        apiKey: "AIzaSyDKVI3I7T1exxi6mIL-UkNmWYE1f7E40TI",
+        maxVideos: 10,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

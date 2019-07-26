@@ -1,5 +1,4 @@
 import React from "react"
-import { withPrefix } from "gatsby"
 import { StyledCard, CardImage, CardContent } from "../elements/Card"
 import Img from "gatsby-image"
 
