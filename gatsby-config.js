@@ -68,6 +68,17 @@ module.exports = {
         maxVideos: 8,
       },
     },
+    {
+      resolve: `gatsby-source-cosmicjs`,
+      options: {
+        bucketSlug: `learn-build-teach`,
+        objectTypes: [`courses`],
+        // If you have enabled read_key to fetch data (optional).
+        apiAccess: {
+          read_key: `wbuuqUJy0IIUkWTPTzt8uFAbju2onePTpIUobyYhsbBNu63OV1`,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
