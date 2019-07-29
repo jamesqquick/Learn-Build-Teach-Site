@@ -1,9 +1,9 @@
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   siteMetadata: {
     title: `Learn Build Teach.`,
-    description: `Learn Web Development, Design, and Developer Tools.`,
+    description: `Build a community of learning centered around Web Development, Design, and Developer Tools.`,
     author: `@jamesqquick`,
   },
   proxy: {
@@ -83,4 +83,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
