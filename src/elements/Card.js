@@ -86,15 +86,19 @@ export const CardTag = styled.div`
 export const CardImage = styled.div`
   width: 100%;
   height: ${props => (props.type === "horizontal" ? "100%" : "200px")};
-
-  .gatsby-image-wrapper {
+  img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    display: block;
   }
-
   @media only screen and (max-width: 1000px) {
     order: -1;
     padding: 0;
     width: 100%;
+    & > img {
+      width: 100%;
+    }
   }
 `
 

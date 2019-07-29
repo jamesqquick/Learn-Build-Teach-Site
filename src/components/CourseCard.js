@@ -1,9 +1,9 @@
-import React, { Component } from "react"
-import Card from "./Card"
+import React, { Component } from "react";
+import Card from "./Card";
 
 export const CARD_TYPES = {
   horizontal: "horizontal",
-}
+};
 
 export default class CourseCard extends Component {
   render() {
@@ -17,7 +17,7 @@ export default class CourseCard extends Component {
       videos,
       tag,
       id,
-    } = this.props.course
+    } = this.props.course;
     return (
       <Card
         image={image}
@@ -35,6 +35,6 @@ export default class CourseCard extends Component {
           </p>
         </div>
       </Card>
-    )
+    );
   }
 }

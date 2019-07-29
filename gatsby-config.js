@@ -75,7 +75,7 @@ module.exports = {
         objectTypes: [`courses`],
         // If you have enabled read_key to fetch data (optional).
         apiAccess: {
-          read_key: `wbuuqUJy0IIUkWTPTzt8uFAbju2onePTpIUobyYhsbBNu63OV1`,
+          read_key: `VP8TzUNaZ5AYcFVxh7jKaXU4107w96gjugiTB316ZW5qJna7nb`,
         },
       },
     },
