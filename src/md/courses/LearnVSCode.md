@@ -1,6 +1,7 @@
 ---
-path: "/courses/learnvscode"
+slug: "/courses/learnvscode"
 createdDate: "2018-09-15"
+posttype: "course"
 title: "Learn Visual Studio Code"
 description: "Improve your efficiency and proficiency as a developer by learning everything you need to know about the most popular editor in Web Development."
 id: "3"

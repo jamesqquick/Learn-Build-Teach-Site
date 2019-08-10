@@ -1,6 +1,7 @@
 ---
 path: "/courses/corefundamentals"
 createdDate: "2018-04-01"
+posttype: "course"
 title: "Core Fundamentals of Web Development"
 description: "In this course, we will use pure HTML, CSS, and Javascript (no libraries or frameworks!!) to create a Link Saver application. This course is designed for Beginner to Intermediate Web Developers who are looking to learn new concepts or reinforce ones they've already been exposed to."
 id: "1"

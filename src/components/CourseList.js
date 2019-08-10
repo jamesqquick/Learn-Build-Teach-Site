@@ -1,8 +1,8 @@
-import React, { Fragment } from "react"
-import { StaticQuery, graphql } from "gatsby"
-import CourseCard, { CARD_TYPES } from "./CourseCard"
-import { CardList } from "../elements/Card"
-import { StyledCourseList } from "../elements/CourseList"
+import React, { Fragment } from "react";
+import { StaticQuery, graphql } from "gatsby";
+import CourseCard, { CARD_TYPES } from "./CourseCard";
+import { CardList } from "../elements/Card";
+import { StyledCourseList } from "../elements/CourseList";
 const CourseList = props => {
   return (
     <StaticQuery
@@ -10,6 +10,7 @@ const CourseList = props => {
         query {
           allMarkdownRemark(
             sort: { fields: [frontmatter___createdDate], order: DESC }
+            filter: { frontmatter: { posttype: { eq: "course" } } }
           ) {
             edges {
               node {
@@ -42,14 +43,14 @@ const CourseList = props => {
       render={data => {
         const courses = data.allMarkdownRemark.edges.map(
           course => course.node.frontmatter
-        )
+        );
         const featuredCourses = courses.filter(
           course => course.featured === "true"
-        )
+        );
         const notFeaturedCourses = courses.filter(
           course => course.featured !== "true"
-        )
-        const featuredCourse = featuredCourses[0]
+        );
+        const featuredCourse = featuredCourses[0];
         return (
           <StyledCourseList>
             {featuredCourse && (
@@ -77,10 +78,10 @@ const CourseList = props => {
               !
             </h4>
           </StyledCourseList>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};
 
-export default CourseList
+export default CourseList;
