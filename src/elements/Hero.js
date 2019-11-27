@@ -20,6 +20,7 @@ export const StyledHero = styled.div`
     margin-top: 1rem;
     text-align: center;
     margin-bottom: 3rem;
+    font-style: italic;
   }
 
   .hero-image {

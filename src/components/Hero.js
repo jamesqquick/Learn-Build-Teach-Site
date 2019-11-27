@@ -8,7 +8,7 @@ export default () => {
       <img className="hero-image" src={logo} alt="Learn Build Teach Logo." />
       <h1 className="hero-title">DEVELOPMENT, DESIGN, AND TOOLS</h1>
       <h4 className="hero-subtitle">
-        LET'S BUILD A COMMUNITY THAT LEARNS TOGETHER!
+        Let's build a community that learns together!
       </h4>
       <LinkButton href="#courses">Start Learning!</LinkButton>
     </StyledHero>
