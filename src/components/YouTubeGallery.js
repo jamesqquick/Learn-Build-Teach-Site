@@ -51,13 +51,14 @@ export default class YouTubeGallery extends Component {
                 ))
               )}
             </StyledGallery>
+
             <div className="text-center">
               <LinkButton
                 href="https://www.youtube.com/c/jamesqquick"
                 type="secondary"
               >
                 View Channel!
-              </LinkButton>{" "}
+              </LinkButton>
             </div>
           </div>
         )}

@@ -3,6 +3,9 @@ import { StaticQuery, graphql } from "gatsby"
 import CourseCard, { CARD_TYPES } from "./CourseCard"
 import { CardList } from "../elements/Card"
 import { StyledCourseList } from "../elements/CourseList"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faYoutube } from "@fortawesome/free-brands-svg-icons"
+import { SocialFollowIcon } from "../elements/SocialFollow"
 const CourseList = props => {
   return (
     <StaticQuery
@@ -70,11 +73,15 @@ const CourseList = props => {
               ))}
             </CardList>
             <h4 className="callout">
-              Want more <strong>FREE</strong> content? Check us out on{" "}
-              <strong>
-                <a href="https://www.youtube.com/c/jamesqquick">YouTube</a>
-              </strong>
-              !
+              Want more <strong>FREE</strong> content? Subscribe to the YouTube
+              channel!
+              <SocialFollowIcon
+                href="https://www.youtube.com/c/jamesqquick?sub_confirmation=1"
+                target="_blank"
+                type="youtube"
+              >
+                <FontAwesomeIcon icon={faYoutube} size="4x" />
+              </SocialFollowIcon>
             </h4>
           </StyledCourseList>
         )
