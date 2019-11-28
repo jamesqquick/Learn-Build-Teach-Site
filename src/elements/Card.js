@@ -16,7 +16,6 @@ export const StyledCard = styled.div`
 
   &:hover {
     ${hover}
-
     h3 {
       color: ${primary};
     }
