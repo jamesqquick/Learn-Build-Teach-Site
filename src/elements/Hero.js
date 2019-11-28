@@ -8,6 +8,7 @@ export const StyledHero = styled.div`
   background: ${backgroundDark};
   padding: 16rem 2rem;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  position: relative;
 
   .hero-title {
     color: ${white};

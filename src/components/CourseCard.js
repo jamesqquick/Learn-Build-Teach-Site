@@ -28,7 +28,7 @@ export default class CourseCard extends Component {
         type={this.props.type}
       >
         <div>
-          <h3>{title}</h3>
+          <h3 className="card-title">{title}</h3>
           <p>{description}</p>
           <p>
             <strong>{videos}</strong> videos <strong>{hours}</strong> hours

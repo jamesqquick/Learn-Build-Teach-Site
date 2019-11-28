@@ -40,10 +40,13 @@ export const StyledCard = styled.div`
     width: 100%;
     flex-direction: column;
     align-items: unset;
+    h3.card-title {
+      font-size: 2.4rem;
+    }
   }
 
   @media only screen and (max-width: 786px) {
-    h3 {
+    h3.card-title {
       font-size: 2.4rem;
     }
   }
@@ -85,10 +88,13 @@ export const CardTag = styled.div`
 
 export const CardImage = styled.div`
   width: 100%;
+  max-height: 300px;
+  overflow: hidden;
   height: ${props => (props.type === "horizontal" ? "100%" : "200px")};
 
   .gatsby-image-wrapper {
     height: 100%;
+    max-height: 300px;
   }
 
   @media only screen and (max-width: 1000px) {
