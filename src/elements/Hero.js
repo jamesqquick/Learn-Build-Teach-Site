@@ -7,10 +7,12 @@ export const StyledHero = styled.div`
   justify-content: center;
   background: ${backgroundDark};
   padding: 16rem 2rem;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
   .hero-title {
     color: ${white};
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 
   .hero-subtitle {

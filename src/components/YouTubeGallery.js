@@ -55,7 +55,7 @@ export default class YouTubeGallery extends Component {
             <div className="text-center">
               <LinkButton
                 href="https://www.youtube.com/c/jamesqquick"
-                type="secondary"
+                btnType="secondary"
               >
                 View Channel!
               </LinkButton>

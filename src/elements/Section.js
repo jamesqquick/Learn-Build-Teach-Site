@@ -15,7 +15,7 @@ export const StyledSection = styled.section`
   }
   h4.section-subtitle {
     color: ${primary};
-    font-weight: 500;
+    font-weight: 100;
     margin-top: -4rem;
     margin-bottom: 5rem;
   }

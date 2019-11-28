@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-import { black, primary } from "../utilities/Colors"
+import { black, primary, lightGrey } from "../utilities/Colors"
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0;
+        background-color: ${lightGrey}; 
     }
 
     h1,

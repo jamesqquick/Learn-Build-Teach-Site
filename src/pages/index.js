@@ -25,7 +25,7 @@ const IndexPage = () => (
       title="Newsletter"
       id="newsletter"
       type={SECTION_TYPES.LIGHT}
-      subtitle="Sign up to get a free guide to Web Development in Visual Studio Code!"
+      subtitle="Sign up for updates on videos, courses, giveaways, and more!"
     >
       <Newsletter />
     </Section>
