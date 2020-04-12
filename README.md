@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/jamesqquick/Learn-Build-Teach-Site) 
+
 # Learn Build Teach
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b9a205dd-5ae4-45e5-ae7e-b13aa830b669/deploy-status)](https://app.netlify.com/sites/hardcore-liskov-ec6efe/deploys)
