@@ -6,12 +6,13 @@ export const StyledCard = styled.div`
   background: white;
   border-radius: 5px;
   transition: 200ms;
-  align-items: ${props => (props.type === "horizontal" ? "center" : "")};
+  align-items: ${(props) => (props.type === "horizontal" ? "center" : "")};
   position: relative;
   display: flex;
-  flex-direction: ${props => (props.type === "horizontal" ? "row" : "column")};
+  flex-direction: ${(props) =>
+    props.type === "horizontal" ? "row" : "column"};
   position: relative;
-  margin-bottom: ${props => (props.type === "horizontal" ? "4rem" : "0")};
+  margin-bottom: ${(props) => (props.type === "horizontal" ? "4rem" : "0")};
   ${shadow}
 
   &:hover {
@@ -27,6 +28,7 @@ export const StyledCard = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 10;
   }
 
   @media only screen and (max-width: 1200px) {
@@ -89,7 +91,7 @@ export const CardImage = styled.div`
   width: 100%;
   max-height: 300px;
   overflow: hidden;
-  height: ${props => (props.type === "horizontal" ? "100%" : "200px")};
+  height: ${(props) => (props.type === "horizontal" ? "100%" : "200px")};
 
   .gatsby-image-wrapper {
     height: 100%;
