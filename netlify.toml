@@ -1,3 +1,10 @@
 [build]
   functions = "lambda"
   Command = "npm run prod"
+
+[[redirects]]
+  from = "/*"
+  to = "https://discord.gg/vM2bagU"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
